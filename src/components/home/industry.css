@@ -1,0 +1,157 @@
+.ss {
+    font-family: Arial, sans-serif;
+    background-color: #f8f7ff;
+    margin: 0;
+    padding: 20px;
+}
+.p1-container {
+    background: linear-gradient(180deg, #ece6f8 0%, rgba(228, 219, 246, 0) 100%);
+    border-radius: 30px;
+    padding: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.left-column {
+    flex: 1;
+    padding-left: 30px;
+    padding-top: 40px;
+}
+.right-column {
+    flex: 2;
+    background-color: white;
+    border-radius: 15px;
+    
+}
+h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+}
+p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 30px;
+}
+.book-call {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #E6E9EE;
+    color: black;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+    margin-top: 130px;
+    width: 295px;
+    height: 52px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 50px;
+}
+.book-call img {
+    width: 25px;
+    color: black;
+}
+.book-call:hover {
+    background-color: #e0e0e0;
+}
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+.industry-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.industry-column {
+    flex: 1;
+    min-width: 200px;
+    position: relative;
+    
+}
+.industry-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 17px;
+    padding: 10px 0;
+    border-bottom: 1px dotted #e0e0e0;
+    padding-left: 38px;
+    margin-top: 20px;
+}
+.checkmark {
+    width: 20px;
+    height: 20px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.checkmark::before {
+    content: "\2714";
+    color: white;
+    font-size: 12px;
+}
+
+/* Media Queries */
+/* For large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+    .p1-container {
+        flex-direction: row;
+    }
+    .left-column {
+        padding-right: 40px;
+        padding-bottom: 0;
+    }
+    .industry-column:first-child::after {
+        content: '';
+        position: absolute;
+        right: -20px;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: #e0e0e0;
+    }
+    
+}
+/* For medium devices (tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    h1 {
+        font-size: 35px;
+    }
+    p {
+        font-size: 18px;
+    }
+    .industry-list {
+        flex-direction: row;
+    }
+    .industry-column {
+        flex: 1;
+    }
+}
+/* For small devices (mobiles, up to 767px) */
+@media (max-width: 767px) {
+    .p1-container {
+        padding: 30px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    p {
+        font-size: 16px;
+    }
+    .book-call {
+        width: 100%;
+        font-size: 20px;
+        margin-bottom: 20px;
+        margin-left: -14%; 
+        margin-top: 20px;
+    }
+    .industry-list {
+        flex-direction: column;
+    }
+}

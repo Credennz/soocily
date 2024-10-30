@@ -1,0 +1,214 @@
+FAQ Section
+.tf-faq-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tf-faq-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 3px 10px;
+    background-color: #F6F7F9;
+    border: 1px solid #E1E4EB;
+    border-radius: 20px;
+    cursor: pointer;
+    
+}
+
+.tf-faq-logo {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+}
+
+.tf-faq-button span {
+    font-size: 0.9em;
+    color: #333;
+    font-weight: bold;
+}
+
+.tf-faq-button h6 {
+    margin: 0;
+    font-size: 0.9em;
+    color: #333;
+    font-weight: bold;
+}
+.tf-faq {
+    padding: 90px 40px;
+    background-color: #fff;
+}
+
+.tf-faq-button img {
+width: 15px;
+height: 15px;
+object-fit: contain;
+}
+
+
+.tf-faq h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+} */
+
+.tf-faq-item {
+    margin-bottom: 20px;
+    border: 1px solid #E1E4EB;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.tf-faq-item button {
+    width: 100%;
+    background-color: #F6F7F9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    padding: 15px;
+    text-align: left;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.tf-faq-item button:hover {
+    background-color: #e0e0e0;
+}
+
+.tf-faq-item button p {
+    margin: 0;
+    max-width: 90%;
+}
+
+.tf-plus-icon {
+    width: 24px;
+    height: 24px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.tf-faq-item.active .tf-plus-icon {
+    transform: rotate(45deg);
+}
+
+.tf-content {
+    display: none;
+    padding: 15px;
+    background-color: #fff;
+    border-top: 1px solid #E1E4EB;
+}
+
+.tf-faq-item.active .tf-content {
+    display: block;
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .tf-slider-header h2 {
+        font-size: 2em;
+    }
+
+    .tf-testimonial-card {
+        width: 300px;
+    }
+
+    .tf-slide-track {
+        width: calc(300px * 7);
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-300px * 7));
+        }
+    }
+    
+    .tf-testimonials-button{
+        align-items: 100%;
+    }
+    .tf-faq h2 {
+        font-size: 1.8em;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .tf-slider-header h2 {
+        font-size: 1.8em;
+    }
+
+    .tf-testimonial-card {
+        width: 250px;
+        padding: 15px;
+    }
+
+    .tf-slide-track {
+        width: calc(250px * 7);
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-250px * 7));
+        }
+    }
+
+    .tf-faq h2 {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 480px) {
+    .tf-slider-header h2 {
+        font-size: 1.5em;
+    }
+
+    .tf-testimonial-card {
+        width: 200px;
+    }
+
+    .tf-slide-track {
+        width: calc(200px * 7);
+    }
+    
+
+    
+    .tf-x{
+        display: inline;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-200px * 7));
+        }
+    }
+
+    .tf-faq h2 {
+        font-size: 1.4em;
+    }
+
+    .tf-faq-item button {
+        font-size: 1em;
+    }
+}

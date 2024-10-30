@@ -1,0 +1,235 @@
+/* Mobile view adjustments */
+@media (max-width: 480px) {
+    .comparison-container {
+      margin: 20px auto;
+      padding: 10px;
+    }
+
+    .title {
+      font-size: 24px;
+      margin: 20px 0;
+    }
+    @media (max-width: 480px) {
+      .vs-container {
+        padding-top: 985px;
+      }
+    }
+
+    .comparison-grid {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+      position: relative;
+    }
+
+    .vs-container {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+    }
+
+    .middle-circle {
+      width: 40px;
+      height: 40px;
+    }
+
+    .inner-circle {
+      width: 30px;
+      height: 30px;
+      font-size: 10px;
+    }
+
+    .side-title {
+      font-size: 20px;
+      margin-left: 0;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .comparison-item {
+      font-size: 14px;
+      padding: 10px;
+      margin: 4px;
+    }
+
+    .soocily-logo {
+      height: 80px;
+      width: 100px;
+      margin: 0 auto 10px;
+    }
+  }
+
+  .comparison-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+    position: relative;
+  }
+
+  .comparison-badge {
+    position: absolute;
+    top: -42px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .comparison-badge span {
+    color: #8a2be2;
+    font-weight: 500;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    margin: 40px 0;
+  }
+
+  .comparison-grid {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    position: relative;
+  }
+
+  .comparison-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    border-radius: 24px;
+    padding: 30px;
+  }
+
+  .box-other-agencies {
+    background: linear-gradient(to right, white, #d2bfee);
+  }
+
+  .box-soocily {
+    background: linear-gradient(
+      120deg,
+      #b680e2 1.36%,
+      #bfa1d7 20.09%,
+      #ffffff 100%
+    );
+  }
+
+  .vs-container {
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .middle-circle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.6);
+  }
+
+  .inner-circle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #783ec9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inner-circle span {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .dimensions {
+    background: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #666;
+  }
+
+  .side-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 36px;
+    margin-left: 115px;
+  }
+
+  .comparison-list {
+    flex-grow: 1;
+    background: white;
+    border-radius: 16px;
+    padding: 4px;
+  }
+
+  .comparison-item {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    margin: 8px;
+    background: white;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #333;
+  }
+
+  /* Left side X marks */
+  .negative-item::before {
+    width: 20px;
+    height: 20px;
+    background-color: #edeff3;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    content: "×";
+    color: rgb(15, 14, 14);
+    font-size: 15px;
+  }
+
+  /* Right side check marks */
+  .positive-item::before {
+    width: 20px;
+    height: 20px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    content: "\2714";
+    color: white;
+    font-size: 12px;
+  }
+
+  .soocily-logo {
+    height: 122px;
+    margin-bottom: -19px;
+    width: 159px;
+    margin-top: -30px;
+    margin-left: 145px;
+  }

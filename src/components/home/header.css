@@ -1,0 +1,878 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    display: block;
+  }
+
+  .hb-main {
+    background: linear-gradient(
+      180deg,
+      #6b2c94 0%,
+      #8e3a9d 30%,
+      #b75e4d 70%,
+      #e6855f 100%
+    );
+    height: 1000px;
+    color: white;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hb-hero-section {
+    text-align: center;
+    top: -135px;
+    padding: 2.5rem 1rem 2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .hb-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    /* backdrop-filter: blur(10px); */
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 35px;
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hb-logo img {
+    height: 35px;
+    width: auto;
+    margin-top: 8px;
+  }
+
+  .hb-nav-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-right: 10px;
+  }
+
+  .hb-nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .hb-contact-btn {
+    background: linear-gradient(180deg, #731c9e 0%, #c38049 100%);
+    color: #6a1b9a;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: transform 0.3s ease;
+    margin-left: 100px;
+  }
+
+  .hb-contact-btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .hb-since {
+    background: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 28px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: black;
+    font-weight: normal;
+  }
+
+  .net p {
+    width: 193px;
+    display: inline-flex;
+    background: white;
+    padding: 0.5rem 1.6rem;
+    border-radius: 28px;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    color: black;
+    font-weight: normal;
+    position: absolute;
+    top: 21%;
+    left: 42%;
+    height: 45px;
+  }
+
+  .net img {
+    width: 252px;
+    height: 60px;
+    display: flex;
+    display: inline-flex;
+  }
+
+  .hb-point img {
+    margin-top: 10px;
+    height: 35px;
+    width: 40px;
+  }
+
+  .hb-since::before {
+    content: "•";
+    color: #4caf50;
+  }
+
+  .hb-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .hb-stats {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+  }
+
+  .hb-net {
+    z-index: 0;
+    position: relative;
+  }
+
+  .hb-atlft {
+    left: 3%;
+    top: 17%;
+    position: absolute;
+  }
+
+  .hb-atright {
+    left: 84%;
+    top: 17%;
+    position: absolute;
+  }
+
+  .hb-top {
+    position: absolute;
+    top: -161px;
+    left: 36%;
+  }
+
+  .hb-top img {
+    height: 226px;
+    width: 380px;
+  }
+
+  .hb-actions {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: -1.5rem;
+    /* backdrop-filter: blur(5px); */
+    display: inline-flex;
+    z-index: 2;
+    margin-top: 0px;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hb-cta-button {
+    background: rgba(255, 255, 255, 0.9);
+    color: #6b2c94;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+  }
+
+  .hb.cta-button:hover {
+    transform: translateY(-2px);
+  }
+
+  .hb-a {
+    z-index: -1;
+    display: flex;
+  }
+
+  .hb-igl {
+    margin-right: -4px;
+    margin-top: 8px;
+  }
+
+  .hb-igr {
+    margin-left: -4px;
+    margin-top: 8px;
+  }
+
+  .hb-customers-badge {
+    background-color: rgb(237 227 227);
+    display: inline-flex;
+    /* background: rgba(255, 255, 255, 0.1); */
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border: 1px solid white;
+  }
+
+  .hb-customers-badge span {
+    color: black;
+  }
+
+  .hb-avatar-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .hb-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-right: -8px;
+  }
+
+  .hb-avatar img {
+    margin-left: -4px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .hb-stats-container {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 3rem;
+    border: 1px solid white;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.05);
+    max-width: 1180px;
+    width: 100%;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    top: 102%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hb-stat-card {
+    background: linear-gradient(180deg, #e4dddc 0%, #f0c2b8 100%);
+    border-radius: 20px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    color: black;
+    text-align: center;
+  }
+
+  .hb-stat-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .hb-stat-number {
+    color: black;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hb-stat-label {
+    color: black;
+    font-size: 0.85rem;
+  }
+
+  /* Mobile Menu Button */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    padding: 1rem;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    transition: 0.3s;
+  }
+
+  /* logo part */
+  .hb-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 40px;
+    font-weight: 200;
+  }
+
+  .client-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+
+  .client-logo {
+    height: 40px;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    background-color: #ffffff;
+  }
+
+  .client-logo:hover {
+    opacity: 1;
+  }
+
+  .certification-section {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .certification-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+
+  .certification-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .certification-logo {
+    width: 350px;
+
+    height: auto;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .hb-actions {
+      position: relative;
+    }
+
+    .hb-stats-container {
+      position: relative;
+      margin-top: 120px;
+    }
+
+    .client-logos,
+    .certification-logos {
+      gap: 20px;
+    }
+
+    .client-logo {
+      height: 30px;
+    }
+
+    .certification-logo {
+      height: 40px;
+    }
+
+    .hb-net {
+      display: none;
+    }
+
+    .hb-atlft {
+      display: none;
+    }
+
+    .hb-atright {
+      display: none;
+    }
+
+    .hb-top {
+      display: none;
+    }
+  }
+
+  /* Updated media queries for better mobile responsiveness */
+  @media (max-width: 768px) {
+    .hb-hero-section {
+      padding: 4rem 1rem;
+      top: 10px;
+    }
+
+    .menu-toggle {
+      display: flex;
+    }
+
+    .hb-nav-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      background: white;
+      padding: 1rem;
+      border-radius: 0 0 20px 20px;
+    }
+
+    .hb-nav-links.active {
+      display: flex;
+    }
+
+    .hb-nav {
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .hb-contact-btn {
+      margin-top: 1rem;
+    }
+
+    .hb-nav-links a {
+      color: black;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .hb-customers-badge {
+      gap: 1rem;
+    }
+
+    .hb-net {
+      display: none;
+    }
+
+    .hb-atlft {
+      display: none;
+    }
+
+    .hb-atright {
+      display: none;
+    }
+
+    .hb-top {
+      display: none;
+    }
+  }
+
+
+@media (max-width: 380px) {
+.hb-hero-section {
+      padding: 3rem 0.5rem;
+      top: 0%;
+    }
+
+    .hb-title {
+      font-size: 1.8rem;
+    }
+
+    .hb-nav {
+      padding: 0.4rem 0.8rem;
+    }
+
+    .hb-logo img {
+      height: 35px;
+    }
+
+    .hb-nav-links a {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.6rem;
+    }
+
+    .hb-contact-btn {
+      padding: 0.3rem 0.8rem;
+    }
+
+    .hb-stats-container {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 0.8rem;
+      margin-top: 112px;
+    }
+
+    .hb-stat-number {
+      font-size: 1.5rem;
+    }
+
+    .hb-stat-label {
+      font-size: 0.75rem;
+    }
+
+    .hb-customers-badge {
+      gap: 1.3rem;
+      padding: 0.4rem 1rem;
+    }
+
+    .hb-stats {
+      font-size: 0.95rem;
+      padding: 0 0.5rem;
+    }
+
+    .net {
+      display: flex;
+      margin-left: 10px;
+      gap: 42px;
+    }
+
+    .net img {
+      width: 152px;
+      height: 58px;
+    }
+
+    .net p {
+      top: 151px;
+      left: 28%;
+      width: 173px;
+    }
+
+    .hb-point img {
+      height: 43px;
+      width: 43px;
+      margin-left: -10px;
+    }
+
+    .hb-net {
+      display: none;
+    }
+
+    .hb-actions {
+      margin-top: 50px;
+      top: 58%;
+      left: 49%;
+    }
+    .hb-a {
+      left: 10px;
+    }
+
+    .hb-atlft {
+      display: none;
+    }
+
+    .hb-atright {
+      display: none;
+    }
+
+    .hb-top {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 400px) and (min-width: 380px) {
+    .hb-hero-section {
+      padding: 3rem 0.5rem;
+      top: 0%;
+    }
+
+    .hb-title {
+      font-size: 1.8rem;
+    }
+
+    .hb-nav {
+      padding: 0.4rem 0.8rem;
+    }
+
+    .hb-logo img {
+      height: 35px;
+    }
+
+    .hb-nav-links a {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.6rem;
+    }
+
+    .hb-contact-btn {
+      padding: 0.3rem 0.8rem;
+    }
+
+    .hb-stats-container {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 0.8rem;
+      margin-top: 103px;
+    }
+
+    .hb-stat-number {
+      font-size: 1.5rem;
+    }
+
+    .hb-stat-label {
+      font-size: 0.75rem;
+    }
+
+    .hb-customers-badge {
+      gap: 1.3rem;
+      padding: 0.4rem 1rem;
+    }
+
+    .hb-stats {
+      font-size: 0.95rem;
+      padding: 0 0.5rem;
+    }
+
+    .net {
+      display: flex;
+      margin-left: 10px;
+      gap: 42px;
+    }
+
+    .net img {
+      width: 152px;
+      height: 58px;
+    }
+
+    .net p {
+      top: 151px;
+      left: 27%;
+      width: 173px;
+    }
+
+    .hb-point img {
+      height: 43px;
+      width: 43px;
+      margin-left: -10px;
+    }
+
+    .hb-net {
+      display: none;
+    }
+
+    .hb-actions {
+      margin-top: 50px;
+      top: 58%;
+      left: 47%;
+    }
+    .hb-a {
+      left: 10px;
+    }
+
+    .hb-atlft {
+      display: none;
+    }
+
+    .hb-atright {
+      display: none;
+    }
+
+    .hb-top {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 420px) and (min-width: 401px) {
+    .hb-hero-section {
+      padding: 3rem 0.5rem;
+      top: 0%;
+    }
+
+    .hb-title {
+      font-size: 1.8rem;
+    }
+
+    .hb-nav {
+      padding: 0.4rem 0.8rem;
+    }
+
+    .hb-logo img {
+      height: 35px;
+    }
+
+    .hb-nav-links a {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.6rem;
+    }
+
+    .hb-contact-btn {
+      padding: 0.3rem 0.8rem;
+    }
+
+    .hb-stats-container {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 0.8rem;
+      margin-top: 95px;
+    }
+
+    .hb-stat-number {
+      font-size: 1.5rem;
+    }
+
+    .hb-stat-label {
+      font-size: 0.75rem;
+    }
+
+    .hb-customers-badge {
+      gap: 1.3rem;
+      padding: 0.4rem 1rem;
+    }
+
+    .hb-stats {
+      font-size: 0.95rem;
+      padding: 0 0.5rem;
+    }
+
+    .net {
+      display: flex;
+      margin-left: 10px;
+      gap: 42px;
+    }
+
+    .net img {
+      width: 152px;
+      height: 58px;
+    }
+
+    .net p {
+      top: 151px;
+      left: 25%;
+      width: 173px;
+    }
+
+    .hb-point img {
+      height: 43px;
+      width: 43px;
+      margin-left: -10px;
+    }
+
+    .hb-net {
+      display: none;
+    }
+
+    .hb-actions {
+      margin-top: 50px;
+      top: 58%;
+      left: 44%;
+    }
+    .hb-a {
+      left: 10px;
+    }
+
+    .hb-atlft {
+      display: none;
+    }
+
+    .hb-atright {
+      display: none;
+    }
+
+    .hb-top {
+      display: none;
+    }
+  }
+   @media only screen and (max-width: 440px) and (min-width: 421px) {
+    .hb-hero-section {
+      padding: 3rem 0.5rem;
+      top: 0%;
+    }
+
+    .hb-title {
+      font-size: 1.8rem;
+    }
+
+    .hb-nav {
+      padding: 0.4rem 0.8rem;
+    }
+
+    .hb-logo img {
+      height: 35px;
+    }
+
+    .hb-nav-links a {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.6rem;
+    }
+
+    .hb-contact-btn {
+      padding: 0.3rem 0.8rem;
+    }
+
+    .hb-stats-container {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 0.8rem;
+      margin-top: 95px;
+    }
+
+    .hb-stat-number {
+      font-size: 1.5rem;
+    }
+
+    .hb-stat-label {
+      font-size: 0.75rem;
+    }
+
+    .hb-customers-badge {
+      gap: 1.3rem;
+      padding: 0.4rem 1rem;
+    }
+
+    .hb-stats {
+      font-size: 0.95rem;
+      padding: 0 0.5rem;
+    }
+
+    .net {
+      display: flex;
+      margin-left: 10px;
+      gap: 42px;
+    }
+
+    .net img {
+      width: 152px;
+      height: 58px;
+    }
+
+    .net p {
+      top: 151px;
+      left: 105px;
+      width: 173px;
+    }
+
+    .hb-point img {
+      height: 43px;
+      width: 43px;
+      margin-left: -10px;
+    }
+
+    .hb-net {
+      display: none;
+    }
+
+    .hb-actions {
+      margin-top: 50px;
+      top: 58%;
+      left: 42%;
+    }
+    .hb-a {
+      left: 10px;
+    }
+
+    .hb-atlft {
+      display: none;
+    }
+
+    .hb-atright {
+      display: none;
+    }
+
+    .hb-top {
+      display: none;
+    }
+  }

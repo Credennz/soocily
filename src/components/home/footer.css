@@ -1,0 +1,144 @@
+ /* Footer Section */
+ footer {
+    background-color: #fff;
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    }
+
+    .tf-logo {
+    max-width: 180px;
+    margin-bottom: -40px;
+    }
+
+   
+
+.tf-footer-links {
+    
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    gap: 10px;
+    margin-bottom: 90px;
+    }
+
+    .tf-footer-links button {
+    text-decoration: none;
+    color: #555;
+    font-size: 1em;
+    padding: 10px 10px;
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+
+    .tf-footer-links button:hover {
+    background-color: #e0e0e0;
+    }
+.tf-x{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .tf-slider-header h2 {
+        font-size: 2em;
+    }
+
+    .tf-testimonial-card {
+        width: 300px;
+    }
+
+    .tf-slide-track {
+        width: calc(300px * 7);
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-300px * 7));
+        }
+    }
+    
+    .tf-testimonials-button{
+        align-items: 100%;
+    }
+    .tf-faq h2 {
+        font-size: 1.8em;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .tf-slider-header h2 {
+        font-size: 1.8em;
+    }
+
+    .tf-testimonial-card {
+        width: 250px;
+        padding: 15px;
+    }
+
+    .tf-slide-track {
+        width: calc(250px * 7);
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-250px * 7));
+        }
+    }
+
+    .tf-faq h2 {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 480px) {
+    .tf-slider-header h2 {
+        font-size: 1.5em;
+    }
+
+    .tf-testimonial-card {
+        width: 200px;
+    }
+
+    .tf-slide-track {
+        width: calc(200px * 7);
+    }
+    
+
+    
+    .tf-x{
+        display: inline;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-200px * 7));
+        }
+    }
+
+    .tf-faq h2 {
+        font-size: 1.4em;
+    }
+
+    .tf-faq-item button {
+        font-size: 1em;
+    }
+}
