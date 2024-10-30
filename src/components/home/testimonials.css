@@ -34,7 +34,7 @@
     font-weight: bold;
 }
 
-/* Slider Header */
+
 .tf-slider-header {
     text-align: center;
     margin-bottom: 40px;
@@ -45,21 +45,18 @@
     margin-top: 40px;
 }
 
-/* Testimonials Slider Container */
 .tf-slider-container {
     overflow: hidden;
     width: 100%;
     position: relative;
 }
 
-/* Track for Sliding */
 .tf-slide-track {
     display: flex;
-    width: calc(300px * 14); /* 7 original cards + 7 duplicates */
+    width: calc(300px * 14); 
     animation: scroll 50s linear infinite;
 }
 
-/* Individual Testimonial Card */
 .tf-testimonial-card {
     width: 320px;
     background-color: #F6F7F9;
@@ -71,7 +68,7 @@
     position: relative;
 }
 
-/* Date Style */
+
 .tf-testimonial-date {
     font-size: 0.9em;
     display: inline-block;
@@ -83,14 +80,13 @@
     border-radius: 20px;
 }
 
-/* Testimonial Text Style */
 .tf-testimonial-text {
     font-size: 1.1em;
     color: #333;
     margin-bottom: 20px;
 }
 
-/* User Info Style */
+
 .tf-user-info {
     border-top: 1px solid #E1E4EB;
     padding-top: 10px;
@@ -117,7 +113,6 @@
     color: #666;
 }
 
-/* Twitter Logo Style */
 .tf-twitter-logo {
     position: absolute;
     bottom: 28px;
@@ -127,16 +122,16 @@
     cursor: pointer;
 }
 
-/* Animation for Sliding */
+
 @keyframes scroll {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-335px * 7)); /* Scroll width of the 7 cards */
+        transform: translateX(calc(-335px * 7)); 
     }
 }
-/* Responsive Design */
+
 @media (max-width: 1024px) {
     .container {
         max-width: 90%;

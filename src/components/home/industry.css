@@ -97,8 +97,7 @@ h2 {
     font-size: 12px;
 }
 
-/* Media Queries */
-/* For large devices (laptops/desktops, 992px and up) */
+
 @media (min-width: 992px) {
     .p1-container {
         flex-direction: row;
@@ -118,7 +117,7 @@ h2 {
     }
     
 }
-/* For medium devices (tablets, 768px to 991px) */
+
 @media (min-width: 768px) and (max-width: 991px) {
     h1 {
         font-size: 35px;
@@ -133,7 +132,7 @@ h2 {
         flex: 1;
     }
 }
-/* For small devices (mobiles, up to 767px) */
+
 @media (max-width: 767px) {
     .p1-container {
         padding: 30px;

@@ -40,7 +40,7 @@
     justify-content: space-between;
     align-items: center;
     background: #ffffff;
-    /* backdrop-filter: blur(10px); */
+   
     border-radius: 50px;
     padding: 0.5rem 1.5rem;
     margin-bottom: 35px;
@@ -179,7 +179,6 @@
     align-items: center;
     gap: 4rem;
     margin-bottom: -1.5rem;
-    /* backdrop-filter: blur(5px); */
     display: inline-flex;
     z-index: 2;
     margin-top: 0px;
@@ -221,7 +220,7 @@
   .hb-customers-badge {
     background-color: rgb(237 227 227);
     display: inline-flex;
-    /* background: rgba(255, 255, 255, 0.1); */
+
     padding: 0.5rem 1.5rem;
     border-radius: 20px;
     align-items: center;
@@ -297,7 +296,7 @@
     font-size: 0.85rem;
   }
 
-  /* Mobile Menu Button */
+
   .menu-toggle {
     display: none;
     flex-direction: column;
@@ -313,7 +312,7 @@
     transition: 0.3s;
   }
 
-  /* logo part */
+
   .hb-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -374,7 +373,6 @@
     height: auto;
   }
 
-  /* Responsive adjustments */
   @media (max-width: 768px) {
     .hb-actions {
       position: relative;
@@ -415,7 +413,6 @@
     }
   }
 
-  /* Updated media queries for better mobile responsiveness */
   @media (max-width: 768px) {
     .hb-hero-section {
       padding: 4rem 1rem;

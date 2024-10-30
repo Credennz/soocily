@@ -1,4 +1,4 @@
- /* Footer Section */
+
  footer {
     background-color: #fff;
     padding: 0px;
@@ -42,7 +42,7 @@
     justify-content: space-between;
     margin: 20px;
 }
-/* Responsive Design */
+
 @media (max-width: 1024px) {
     .container {
         max-width: 90%;

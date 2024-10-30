@@ -1,4 +1,4 @@
-/* Mobile view adjustments */
+
 @media (max-width: 480px) {
     .comparison-container {
       margin: 20px auto;
@@ -196,7 +196,7 @@
     color: #333;
   }
 
-  /* Left side X marks */
+
   .negative-item::before {
     width: 20px;
     height: 20px;
@@ -211,7 +211,6 @@
     font-size: 15px;
   }
 
-  /* Right side check marks */
   .positive-item::before {
     width: 20px;
     height: 20px;

@@ -112,7 +112,7 @@ object-fit: contain;
 .tf-faq-item.active .tf-content {
     display: block;
 }
-/* Responsive Design */
+
 @media (max-width: 1024px) {
     .container {
         max-width: 90%;

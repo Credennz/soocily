@@ -18,7 +18,6 @@
     margin-bottom: 2rem;
 }
 
-/* Article Grid Styles */
 .ra-articles-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -94,7 +93,7 @@
     color: #fff;
 }
 
-/* Modal Styles */
+
 .ra-modal {
     display: flex;
     align-items: center;
@@ -148,7 +147,7 @@
     background-color: #555;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 768px) {
     .ra-title {
         font-size: 1.75rem;
