@@ -247,7 +247,7 @@ h1 {
     top: -134px;
     left: 10%;
     gap: 0px;
-    opacity: 0px;
+     
 }
 
 .shadow-background {
@@ -260,7 +260,7 @@ h1 {
     top: 98px;
   left: 41%;
     gap: 0px;
-    opacity: 0px;
+     
 }
 .editor-interface {
     background-color: #f0f0f0;
@@ -334,7 +334,7 @@ h1 {
         top: -134px;
         left: 27%;
         gap: 0px;
-        opacity: 0px;
+         
     }
     
 }
