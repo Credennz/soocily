@@ -245,7 +245,7 @@ h1 {
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
     position: relative; 
     top: -134px;
-    left: -13px;
+    left: 10%;
     gap: 0px;
     opacity: 0px;
 }
@@ -258,7 +258,7 @@ h1 {
     border-radius: 20px;
     background-color: #d3d3d3;
     top: 98px;
-  left: 98px;
+  left: 41%;
     gap: 0px;
     opacity: 0px;
 }
@@ -324,6 +324,19 @@ h1 {
     .service-card {
         padding: 15px;
     }
+    .shadow-card {
+        width: 172px;
+        height: 275px;
+        border-radius: 20px;
+        background-color: #333;
+        box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+        position: relative; 
+        top: -134px;
+        left: 27%;
+        gap: 0px;
+        opacity: 0px;
+    }
+    
 }
 
 
