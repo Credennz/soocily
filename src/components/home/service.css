@@ -6,6 +6,24 @@
     max-width: 1200px;
     width: 100%;
 }
+.lcontainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.lservice{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f7f9;
+    border: 1px solid #e1e4eb;
+    border-radius: 30px;
+    cursor: pointer;
+    gap: 10px;
+    max-width: 136px;
+    padding: 3px 10px;
+   
+}
 .ssv{
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
@@ -77,13 +95,17 @@
     justify-content: space-between;
 }
 
-.service-card .support-container .support-icons {
+.service-card .support-container  {
     display: flex;
     align-items: flex;
     flex-wrap: nowrap;
     flex-direction: column;
 }
-
+.support-icons2 {
+    display: flex;
+    gap: 8px; /* Adjust the value as needed for spacing */
+    margin-top: 8px;
+}
 .service-card .support-container .support-icons i {
     margin-right: 5px;
     color: #ccc;
@@ -122,14 +144,15 @@
 }
 
 .dot {
-    height: 40px;
-    width: 40px;
-    background-color: #fbf7f7;
-    border-radius: 50%;
-    display: inline-block;
-    /* border: 1px solid black; */
-    box-shadow: 14px 3px 10px rgba(0, 0, 0, 0.5);
-}
+        height: 40px;
+        width: 40px;
+        background-color: #fbf7f7;
+        border-radius: 50%;
+        display: inline-block;
+        /* border: 1px solid black; */
+        box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.5);
+    }
+
   .ht{
     padding-top: 50px;
   }

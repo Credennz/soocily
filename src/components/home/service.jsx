@@ -3,6 +3,16 @@ import React from "react";
 export default function Service() {
   return (
     <div class="ssv">
+      <div class="lcontainer">
+        <div class="lservice">
+          <div class="lservice_logo">
+            <img src="../img/service-l.png" alt="ServiceLogo" />
+          </div>
+          <div class="lservice_name">
+            <span>Services</span>
+          </div>
+        </div>
+      </div>
       <h1>Comprehensive Services We Offer</h1>
       <div class="services-container">
         <div class="service-card">
