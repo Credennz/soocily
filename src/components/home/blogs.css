@@ -2,7 +2,22 @@
     background-color: #f0f0f0;
     color: #333;
     line-height: 1.6;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.ra-blogs{
+    display: flex;
+    align-items: center;
+    background-color: #f6f7f9;
+    border: 1px solid #e1e4eb;
+    border-radius: 30px;
+    cursor: pointer;
+    gap: 5px;
+    max-width: 125px;
+    padding: 3px 10px;
+    justify-content: center;
+}
+.ra-blogs-logo{
+    height: 100%;
+    width: 100%;
 }
 
 .ra-container {
@@ -30,7 +45,6 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
 }
 
 .ra-article-card:hover {
@@ -43,17 +57,17 @@
 }
 
 .ra-article-date {
-    font-size: 0.9rem;
+    font-size: 0.900rem;
     color: #666;
     margin-bottom: 0.5rem;
     background: #fff;
     border-radius: 14px;
     padding: 5px;
-    width: fit-content;
+    width: 99px;
 }
 
 .ra-article-title {
-    font-size: 1.5rem;
+    font-size: 1.50rem;
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -86,6 +100,7 @@
     justify-content: center;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
 }
 
 .ra-read-more-btn:hover {
@@ -93,28 +108,34 @@
     color: #fff;
 }
 
-
-.ra-modal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    overflow-y: auto;
-}
-
 .ra-modal-content {
     background-color: #fff;
+    margin: 10% auto;
     padding: 2rem;
     border-radius: 0.5rem;
     max-width: 600px;
     width: 90%;
     position: relative;
+    padding-bottom: 4rem;
+}
+
+.ra-back-btn {
+    position: absolute;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+    bottom: 1rem;
+    left: 1rem;
+    text-decoration: none;
+}
+
+.ra-back-btn:hover {
+    background-color: #555;
 }
 
 .ra-modal-title {
@@ -128,25 +149,6 @@
     color: #666;
     margin-bottom: 1rem;
 }
-
-.ra-back-btn {
-    font-size: 1rem;
-    cursor: pointer;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    transition: background-color 0.3s ease;
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-}
-
-.ra-back-btn:hover {
-    background-color: #555;
-}
-
 
 @media (max-width: 768px) {
     .ra-title {
@@ -168,7 +170,7 @@
     .ra-modal-content {
         margin: 5% auto;
         padding: 1.5rem;
-        width: 90%;
+        width: 95%;
     }
 
     .ra-read-more-btn {

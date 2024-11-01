@@ -112,7 +112,7 @@ export default function Service() {
               <div class="TT">
                 <p>Framer web design</p>
 
-                <img src="imggg44.png" />
+                <img class="right-click" src="../img/right_click.png" />
               </div>
               <div class="editor-buttons">
                 <button class="tool">B</button>
