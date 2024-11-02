@@ -23,15 +23,18 @@
     }
 
     .tf-footer-links button {
-    text-decoration: none;
-    color: #555;
-    font-size: 1em;
-    padding: 10px 10px;
-    background-color: #f4f4f4;
-    border: none;
-    border-radius: 17px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+      
+            text-decoration: none;
+            color: #555;
+            font-size: 1em;
+            padding: 10px 15px;
+            background-color: #f4f4f4;
+            border: none;
+            border-radius: 17px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 5px; /* Add margin to create spacing between buttons */
+     
     }
 
     .tf-footer-links button:hover {
