@@ -24,6 +24,9 @@
     padding: 3px 10px;
    
 }
+.features-list{
+    height: 460px;
+}
 .ssv{
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
@@ -38,7 +41,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    border-bottom: 2px solid #be7fc9
+    /* border-bottom: 2px solid #be7fc9 */
 }
 
 
@@ -103,8 +106,9 @@
 }
 .support-icons2 {
     display: flex;
-    gap: 8px; /* Adjust the value as needed for spacing */
-    margin-top: 8px;
+    gap: 8px;
+    margin-top: 4px;
+    margin-bottom: 8px;
 }
 .service-card .support-container .support-icons i {
     margin-right: 5px;
@@ -260,6 +264,14 @@
     
 }
 
+.service-card:nth-child(3) {
+    border-bottom:  2px solid #e6e606de; /* Different border color */
+    box-shadow: 0 4px 10px rgba(162, 231, 215, 0.4); /* Different shadow */
+  }
+.service-card:nth-child(5) {
+    border-bottom:  2px solid #4d135ade; /* Different border color */
+    box-shadow: 0 4px 10px#4d135ade; /* Different shadow */
+  }
 .shadow-card {
     width: 172px;
     height: 275px;

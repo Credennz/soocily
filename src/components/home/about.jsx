@@ -9,7 +9,7 @@ export default function about() {
             <div className="ra-blogs">
               <div className="ra-logox">
                 <img
-                  src="../img/about.png"
+                  src="https://thumbs.dreamstime.com/b/icon-encountered-face-encountered-262590375.jpg"
                   alt="aboutsS Logo"
                   className="ra-blogs-logo"
                 />

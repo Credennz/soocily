@@ -45,7 +45,7 @@ p {
     transition: background-color 0.3s;
     margin-top: 130px;
     width: 295px;
-    height: 52px;
+    /* height: 52px; */
     text-align: center;
     font-size: 25px;
     line-height: 50px;
@@ -145,10 +145,10 @@ p {
         font-size: 16px;
     }
     .book-call {
-        width: 100%;
+        width: 192px;
         font-size: 20px;
         margin-bottom: 20px;
-        margin-left: -14%; 
+        /* margin-left: -14%; */
         margin-top: 20px;
     }
     .industry-list {
