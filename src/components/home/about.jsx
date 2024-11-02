@@ -10,7 +10,7 @@ export default function about() {
               <div className="ra-logox">
                 <img
                   src="../img/about.png"
-                  alt="blogs Logo"
+                  alt="aboutsS Logo"
                   className="ra-blogs-logo"
                 />
               </div>
