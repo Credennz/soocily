@@ -1,60 +1,4 @@
-@media (max-width: 480px) {
-  .comparison-container {
-    margin: 20px auto;
-    padding: 10px;
-  }
 
-  .title {
-    font-size: 24px;
-    margin: 20px 0;
-  }
-
-  .comparison-grid {
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-    position: relative;
-  }
-
-  .vs-container {
-    position: absolute;
-    top: 16%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
-  }
-
-  .middle-circle {
-    width: 40px;
-    height: 40px;
-  }
-
-  .inner-circle {
-    width: 30px;
-    height: 30px;
-    font-size: 10px;
-  }
-
-  .side-title {
-    font-size: 20px;
-    margin-left: 0;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .comparison-item {
-    font-size: 14px;
-    padding: 10px;
-    margin: 4px;
-  }
-
-  .soocily-logo {
-    height: 80px;
-    width: 100px;
-    margin: 0 auto 10px;
-  }
-}
 
 .comparison-container {
   max-width: 1200px;
@@ -65,7 +9,7 @@
 
 .comparison-badge {
   position: absolute;
-  top: -41px;
+  top: -21px;
   left: 50%;
   transform: translateX(-50%);
   background: rgb(245, 246, 250);
@@ -223,4 +167,61 @@
   width: 159px;
   margin-top: -30px;
   margin-left: 145px;
+}
+@media (max-width: 480px) {
+  .comparison-container {
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+
+  .comparison-grid {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+  }
+
+  .vs-container {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+  }
+
+  .middle-circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .inner-circle {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .side-title {
+    font-size: 20px;
+    margin-left: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .comparison-item {
+    font-size: 14px;
+    padding: 10px;
+    margin: 4px;
+  }
+
+  .soocily-logo {
+    height: 80px;
+    width: 100px;
+    margin: 0 auto 10px;
+  }
 }
