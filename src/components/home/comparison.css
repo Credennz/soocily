@@ -9,7 +9,7 @@
 
 .comparison-badge {
   position: absolute;
-  top: -21px;
+  top: -41px;
   left: 50%;
   transform: translateX(-50%);
   background: rgb(245, 246, 250);
@@ -223,5 +223,18 @@
     height: 80px;
     width: 100px;
     margin: 0 auto 10px;
+  }
+  .comparison-badge {
+    position: absolute;
+    top: -21px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(245, 246, 250);
+    padding: 8px 16px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(61, 14, 180, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 }
