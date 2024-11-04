@@ -1,90 +1,39 @@
-FAQ Section
+.tf-faq {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 40px 20px; /* Reduced padding for a smaller size */
+    background-color: #fff;
+    max-width: 600px; /* Set a max width for the FAQ section */
+    margin: 0 auto; /* Center the section horizontally */
+    border-radius: 10px; /* Optional: add rounded corners */
+   /* Optional: add a subtle shadow */
+}
+
 .tf-faq-header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reduced margin */
 }
-.tf-faq-item .tf-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-  
-  .tf-faq-item.active .tf-content {
-    max-height: 200px; /* Adjust this based on content length */
-  }
-  
-.tf-faq-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    padding: 3px 10px;
-    background-color: #F6F7F9;
-    border: 1px solid #E1E4EB;
-    border-radius: 20px;
-    cursor: pointer;
-    
-}
-
-.tf-faq-logo {
-    width: 15px;
-    height: 15px;
-    object-fit: contain;
-}
-
-.tf-faq-button span {
-    font-size: 0.9em;
-    color: #333;
-    font-weight: bold;
-}
-
-.tf-faq-button h6 {
-    margin: 0;
-    font-size: 0.9em;
-    color: #333;
-    font-weight: bold;
-}
-.tf-faq {
-    padding: 90px 40px;
-    background-color: #fff;
-}
-
-.tf-faq-button img {
-width: 15px;
-height: 15px;
-object-fit: contain;
-}
-
-
-.tf-faq h2 {
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 30px;
-} 
 
 .tf-faq-item {
-    margin-bottom: 20px;
-   
+    margin-bottom: 15px; /* Reduced margin */
     border-radius: 5px;
-    /* overflow: hidden; */
+    width: 100%; /* Ensure items take full width */
 }
 
 .tf-faq-item button {
-   
-        width: 97%;
-        background-color: #f4f7ff;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border: none;
-        padding: 15px;
-        text-align: left;
-        font-size: 1.1em;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        margin: 10px;
-        border-radius: 15px;
-    
+    width: 100%; /* Full width */
+    background-color: #f4f7ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    padding: 10px; /* Reduced padding */
+    text-align: left;
+    font-size: 1em; /* Adjusted font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 10px; /* Slightly smaller border radius */
 }
 
 .tf-faq-item button:hover {
@@ -97,8 +46,8 @@ object-fit: contain;
 }
 
 .tf-plus-icon {
-    width: 24px;
-    height: 24px;
+    width: 20px; /* Reduced size */
+    height: 20px; /* Reduced size */
     background-color: black;
     color: white;
     border-radius: 50%;
@@ -115,7 +64,7 @@ object-fit: contain;
 
 .tf-content {
     display: none;
-    padding: 15px;
+    padding: 10px; /* Reduced padding */
     background-color: #fff;
     border-top: 1px solid #E1E4EB;
 }
@@ -124,102 +73,48 @@ object-fit: contain;
     display: block;
 }
 
-@media (max-width: 1024px) {
-    .container {
-        max-width: 90%;
-    }
-
-    .tf-slider-header h2 {
-        font-size: 2em;
-    }
-
-    .tf-testimonial-card {
-        width: 300px;
-    }
-
-    .tf-slide-track {
-        width: calc(300px * 7);
-    }
-
-    @keyframes scroll {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(calc(-300px * 7));
-        }
-    }
-    
-    .tf-testimonials-button{
-        align-items: 100%;
-    }
-    .tf-faq h2 {
-        font-size: 1.8em;
-
-    }
+.tf-faq h2 {
+    font-size: 1.5em; /* Adjusted font size for smaller screens */
+    text-align: center;
+    margin-bottom: 20px; /* Reduced margin */
 }
-
+.tf-faq-button {
+    align-items: center;
+    background-color: #f6f7f9;
+    border: 1px solid #e1e4eb;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-flex;
+    gap: 5px;
+    justify-content: center;
+    padding: 3px 10px;
+}
+.tf-faq-button img {
+    height: 15px;
+    object-fit: contain;
+    width: 15px;
+}
 @media (max-width: 768px) {
-    .tf-slider-header h2 {
-        font-size: 1.8em;
-    }
-
-    .tf-testimonial-card {
-        width: 250px;
-        padding: 15px;
-    }
-
-    .tf-slide-track {
-        width: calc(250px * 7);
-    }
-
-    @keyframes scroll {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(calc(-250px * 7));
-        }
-    }
-
     .tf-faq h2 {
-        font-size: 1.6em;
+        font-size: 1.4em; /* Adjusted font size for smaller screens */
+    }
+
+    .tf-faq-item button {
+        font-size: 0.9em; /* Smaller font size */
     }
 }
 
 @media (max-width: 480px) {
-    .tf-slider-header h2 {
-        font-size: 1.5em;
-    }
-
-    .tf-testimonial-card {
-        width: 200px;
-    }
-
-    .tf-slide-track {
-        width: calc(200px * 7);
-    }
-    
-
-    
-    .tf-x{
-        display: inline;
-    }
-
-    @keyframes scroll {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(calc(-200px * 7));
-        }
-    }
-
     .tf-faq h2 {
-        font-size: 1.4em;
+        font-size: 1.2em; /* Further reduced font size */
     }
 
     .tf-faq-item button {
-        font-size: 1em;
+        font-size: 0.8em; /* Smaller font size */
+    }
+
+    .tf-plus-icon {
+        width: 18px; /* Further reduced size */
+        height: 18px; /* Further reduced size */
     }
 }
