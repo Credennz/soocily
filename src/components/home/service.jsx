@@ -16,12 +16,14 @@ export default function Service() {
       <h1>Comprehensive Services We Offer</h1>
       <div class="services-container">
         <div class="service-card">
-          <h2>Social Media Management</h2>
-          <p>
-            Building a cult-following with data-driven posts, strategic
-            collaboration with creators and creating sustained engagement by
-            aligning your brand goal.
-          </p>
+          <div>
+            <h2>Social Media Management</h2>
+            <p>
+              Building a cult-following with data-driven posts, strategic
+              collaboration with creators and creating sustained engagement by
+              aligning your brand goal.
+            </p>
+          </div>
           <ul>
             <div class="Social-item1">
               <span class="checkmark"></span>
@@ -38,12 +40,14 @@ export default function Service() {
           </ul>
         </div>
         <div class="service-card">
-          <h2>Content Production and Creation</h2>
-          <p>
-            Taking content creation to a whole new level for your brand by
-            implementing strategic content integration with value based output
-            expectations.
-          </p>
+          <div>
+            <h2>Content Production and Creation</h2>
+            <p>
+              Taking content creation to a whole new level for your brand by
+              implementing strategic content integration with value based output
+              expectations.
+            </p>
+          </div>
           <ul>
             <div class="content-item1">
               <span class="checkmark"></span>
@@ -60,19 +64,23 @@ export default function Service() {
           </ul>
         </div>
         <div class="service-card card-span">
-          <h3>Influencers and Collaborations</h3>
-          <p>Schedule one-time or recurring tasks exactly when you want.</p>
-          <ul class="features-list">
+          <div>
+            <h2>Influencers and Collaborations</h2>
+            <p>Schedule one-time or recurring tasks exactly when you want.</p>
+          </div>
+          <div class="features-list">
             <div class="shadow-background"></div>
             <div class="shadow-card"></div>
-          </ul>
+          </div>
         </div>
         <div class="service-card">
-          <h2>Digital Ads</h2>
-          <p>
-            Experience the joy of completing tasks with our satisfying
-            checklists. Try it out below!
-          </p>
+          <div>
+            <h2>Digital Ads</h2>
+            <p>
+              Experience the joy of completing tasks with our satisfying
+              checklists. Try it out below!
+            </p>
+          </div>
           <ul>
             <div class="checklist">
               <div class="item completed">
@@ -91,11 +99,13 @@ export default function Service() {
           </ul>
         </div>
         <div class="service-card">
-          <h2>Print Media</h2>
-          <p>
-            Organize and centralize your tasks into distinct lists for various
-            purposes.
-          </p>
+          <div>
+            <h2>Print Media</h2>
+            <p>
+              Organize and centralize your tasks into distinct lists for various
+              purposes.
+            </p>
+          </div>
           <ul>
             <div class="Print-item1">
               <span class="checkmark"></span>
@@ -112,42 +122,25 @@ export default function Service() {
           </ul>
         </div>
         <div class="service-card">
-          <h2>Websites and UI/UX</h2>
-          <p>
-            Discover a new way to work with linked any floating thought,
-            auto-sync links when your task gets live.
-          </p>
+          <div>
+            <h2>Websites and UI/UX</h2>
+            <p>
+              Discover a new way to work with linked any floating thought,
+              auto-sync links when your task gets live.
+            </p>
+          </div>
           <div class="editor-interface">
-            <div class="xt">
-              <div class="TT">
-                <p>Framer web design</p>
-
-                <img class="right-click" src="../img/right_click.png" />
-              </div>
-              <div class="editor-buttons">
-                <button class="tool">B</button>
-                <button class="tool">
-                  <i>I</i>
-                </button>
-                <button class="tool">🔗</button>
-                <button class="tool">
-                  <u>U</u>
-                </button>
-                <button class="tool">
-                  <s>S</s>
-                </button>
-                <button class="tool">•</button>
-                <button class="tool">🖼</button>
-              </div>
-            </div>
+            <img src="../img/uiuxbt.png" alt="" />
           </div>
         </div>
         <div class="service-card">
-          <h2>E-Com Management</h2>
-          <p>
-            Share a copy of your list to anyone so they can use it in their
-            account.
-          </p>
+          <div>
+            <h2>E-Com Management</h2>
+            <p>
+              Share a copy of your list to anyone so they can use it in their
+              account.
+            </p>
+          </div>
           <div class="support-container">
             <div class="support-icons">
               <p>We support</p>
@@ -163,11 +156,13 @@ export default function Service() {
           </div>
         </div>
         <div class="service-card">
-          <h2>Brand Shoot and TVC</h2>
-          <p>
-            Streamline your social media marketing tasks with our efficient
-            tools.
-          </p>
+          <div>
+            <h2>Brand Shoot and TVC</h2>
+            <p>
+              Streamline your social media marketing tasks with our efficient
+              tools.
+            </p>
+          </div>
           <ul>
             <div class="Brand-item1">
               <span class="checkmark"></span>

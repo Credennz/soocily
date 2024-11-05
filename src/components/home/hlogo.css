@@ -1,0 +1,115 @@
+hb-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: clamp(20px, 5vw, 40px) clamp(10px, 3vw, 20px);
+    text-align: center;
+  }
+   
+  .title {
+    margin-bottom: 2rem;
+    padding: 0 clamp(10px, 3vw, 30px);
+  }
+   
+  .title h3 {
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+    color: #333;
+    font-weight: bolder;
+    line-height: 1.4;
+  }
+   
+  .logos-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: clamp(10px, 3vw, 20px) 0;
+    background: white;
+    margin: 1rem 0;
+  }
+   
+  .client-logos {
+    display: flex;
+    align-items: center;
+    gap: clamp(20px, 4vw, 40px);
+    animation: scroll 100s linear infinite;
+    white-space: nowrap;
+    width: max-content;
+  }
+   
+  /* Keyframes for smooth continuous scroll */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-66.66%); /* Scroll the width of all three logo sets */
+    }
+  }
+   
+  .client-logo {
+    height: clamp(25px, 5vw, 40px);
+    object-fit: contain;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    background-color: #ffffff;
+    flex-shrink: 0;
+  }
+   
+  .client-logo:hover {
+    opacity: 1;
+  }
+   
+  .certification-section {
+    padding: clamp(1rem, 3vw, 2rem) clamp(0.5rem, 2vw, 1rem);
+    text-align: center;
+    margin-top: 1rem;
+  }
+   
+  .certification-title {
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+    color: #333;
+    margin-bottom: clamp(1rem, 4vw, 2rem);
+    padding: 0 clamp(10px, 3vw, 30px);
+  }
+   
+  .certification-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1rem, 4vw, 2rem);
+  }
+   
+  .certification-logo {
+    width: min(350px, 90%);
+    height: auto;
+    max-width: 100%;
+  }
+   
+  @media screen and (max-width: 768px) {
+    .client-logos {
+      animation-duration: 20s;
+    }
+  }
+   
+  @media screen and (max-width: 480px) {
+    .client-logos {
+      gap: 15px;
+    }
+  }
+   
+  @media (prefers-reduced-motion: reduce) {
+    .client-logos {
+      
+      transform: translateX(0);
+    }
+  }
+   
+  @media screen and (min-width: 1400px) {
+    
+    .client-logos {
+      animation-duration: 85s;
+    }
+   
+    .client-logo {
+      height: 45px;
+    }}

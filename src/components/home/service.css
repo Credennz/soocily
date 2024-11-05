@@ -37,17 +37,30 @@
     align-items: center;
 }
 .service-card {
+    display: flex;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    /* border-bottom: 2px solid #be7fc9 */
+    /* border-bottom: 2px solid #be7fc9; */
+    flex-direction: column;
+    justify-content: space-around;
 }
+    /* border-bottom: 2px solid #be7fc9 */
 
 
-.service-card h2 {
-    font-size: 18px;
+
+.service-card h2{
+    font-size: 19px;
     margin-bottom: 10px;
+    font-family: 'Instrument Sans';
+    /* font-family: inherit; */
+    font-family: Instrument Sans;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+    font-optical-sizing: auto;
 }
 
 .service-card p {
@@ -57,8 +70,10 @@
 }
 
 .service-card ul {
-    list-style: none;
+    gap: 5px;
     padding-top: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card ul li {
@@ -92,12 +107,18 @@
     margin-right: 10px;
 }
 
+
+   
 .service-card .support-container {
-    display: flex;
     align-items: center;
+    align-items: flex;
+    display: flex;
+    /* top: 43px; */
+    position: relative;
+    flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: space-between;
 }
-
 .service-card .support-container  {
     display: flex;
     align-items: flex;
@@ -268,6 +289,11 @@
     border-bottom:  2px solid #e6e606de; /* Different border color */
     box-shadow: 0 4px 10px rgba(162, 231, 215, 0.4); /* Different shadow */
   }
+.features-list  {
+    gap: 5px;
+    padding-top: 30px;
+   
+  }
 .service-card:nth-child(5) {
     border-bottom:  2px solid #4d135ade; /* Different border color */
     box-shadow: 0 4px 10px#4d135ade; /* Different shadow */
@@ -298,9 +324,9 @@
      
 }
 .editor-interface {
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0;
     border-radius: 5px;
-    padding: 10px;
+    padding: 10px; */
     margin-top: 80px;
 }
 .editor-buttons {
@@ -363,6 +389,7 @@
     .service-card {
         padding: 15px;
     }
+    
     .shadow-card {
         width: 172px;
         height: 275px;
@@ -375,6 +402,16 @@
         gap: 0px;
          
     }
+    .service-card .support-container {
+        align-items: center;
+        align-items: flex;
+        display: flex;
+        top: 1px;
+        position: relative;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
     
 }
 
@@ -386,5 +423,15 @@
     }
     .service-card {
         padding: 10px;
+    }
+    .service-card .support-container {
+        align-items: center;
+        align-items: flex;
+        display: flex;
+        top: 1px;
+        position: relative;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
     }
 }

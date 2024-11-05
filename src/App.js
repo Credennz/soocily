@@ -19,11 +19,13 @@ import Service from "./components/home/service";
 import "./components/home/service.css";
 import Header from "./components/home/header";
 import "./components/home/header.css";
-
+import LogoCarousel from "./components/home/hlogo";
+import "./components/home/hlogo.css";
 function App() {
   return (
     <div className="App">
       <Header />
+      <LogoCarousel />
       <Service />
       <About />
       <Industry />

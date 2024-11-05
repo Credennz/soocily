@@ -168,7 +168,7 @@
   margin-top: -30px;
   margin-left: 145px;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .comparison-container {
     margin: 20px auto;
     padding: 10px;

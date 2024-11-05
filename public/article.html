@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Make sure to use the correct path -->
+  </head>
+  <body>
+    <style>
+      /* styles.css */
+
+      body {
+        background-color: #f0f0f0;
+        color: #333;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .ra-modal-content {
+        background-color: #fff;
+        margin: 10% auto;
+        padding: 2rem;
+        border-radius: 8px;
+        max-width: 600px;
+        width: 90%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .ra-modal-title {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: #2c3e50;
+      }
+
+      .ra-modal-meta {
+        font-size: 0.9rem;
+        color: #7f8c8d;
+        margin-bottom: 1rem;
+      }
+
+      .ra-modal-content div {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        color: #34495e;
+      }
+
+      .ra-back-btn {
+        display: inline-block;
+        margin-top: 1rem;
+        background-color: #2980b9;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+
+      .ra-back-btn:hover {
+        background-color: #3498db;
+      }
+
+      @media (max-width: 768px) {
+        .ra-modal-title {
+          font-size: 1.5rem;
+        }
+
+        .ra-modal-content {
+          margin: 5% auto;
+          padding: 1.5rem;
+          width: 95%;
+        }
+
+        .ra-back-btn {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+    <div class="ra-modal-content" id="article-content">
+      <!-- Content will be populated here by JavaScript -->
+    </div>
+    <a href="/" class="ra-back-btn">← Back</a>
+
+    <script>
+      const articles = [
+        {
+          id: 1,
+          date: "Apr 12, 2024",
+          title: "The Future of AI",
+          uploadedBy: "TechInsider",
+          fullContent:
+            "Artificial Intelligence is rapidly evolving, changing the way we live and work...",
+        },
+        {
+          id: 2,
+          date: "Apr 13, 2024",
+          title: "Sustainable Living Tips",
+          uploadedBy: "EcoWarrior",
+          fullContent:
+            "Small changes in our daily lives can have a big impact on the environment...",
+        },
+        {
+          id: 3,
+          date: "Apr 14, 2024",
+          title: "The Art of Mindfulness",
+          uploadedBy: "ZenMaster",
+          fullContent:
+            "In our fast-paced world, practicing mindfulness can greatly improve mental health...",
+        },
+      ];
+
+      // Get the article ID from the URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const articleId = parseInt(urlParams.get("id"));
+
+      // Find the article based on ID
+      const article = articles.find((a) => a.id === articleId);
+
+      // Populate the HTML content
+      const contentDiv = document.getElementById("article-content");
+      if (article) {
+        contentDiv.innerHTML = `
+                <h2 class="ra-modal-title">${article.title}</h2>
+                <p class="ra-modal-meta">${article.date} | Uploaded by ${article.uploadedBy}</p>
+                <div>${article.fullContent}</div>
+            `;
+      } else {
+        contentDiv.innerHTML = "<p>Article not found</p>";
+      }
+    </script>
+  </body>
+</html>

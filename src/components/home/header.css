@@ -27,7 +27,7 @@
 
   .hb-hero-section {
     text-align: center;
-    top: -126px;
+    top: -121px;
     padding: 2.5rem 1rem 2rem;
     max-width: 1200px;
     width: 100%;
@@ -40,7 +40,7 @@
     justify-content: space-between;
     align-items: center;
     background: #ffffff;
-   
+    /* backdrop-filter: blur(10px); */
     border-radius: 50px;
     padding: 0.5rem 1.5rem;
     margin-bottom: 35px;
@@ -48,6 +48,8 @@
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    z-index: 1;
   }
 
   .hb-logo img {
@@ -58,7 +60,7 @@
 
   .hb-nav-links {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     align-items: center;
     justify-content: center;
     list-style: none;
@@ -95,27 +97,11 @@
     color: black;
     font-weight: normal;
   }
-
-  .net p {
-    width: 193px;
-    display: inline-flex;
-    background: white;
-    padding: 0.5rem 1.6rem;
-    border-radius: 28px;
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    color: black;
-    font-weight: normal;
-    position: absolute;
-    top: 23%;
-    left: 42%;
-    height: 41px;
+  .net {
+    justify-content: center;
   }
 
   .net img {
-    width: 252px;
-    height: 60px;
     display: flex;
     display: inline-flex;
   }
@@ -133,7 +119,7 @@
 
   .hb-title {
     font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 1rem;
     line-height: 1.2;
   }
@@ -145,32 +131,39 @@
   }
 
   .hb-net {
+    top: -3px;
     z-index: 0;
     position: relative;
   }
 
   .hb-atlft {
-    left: 3%;
-    top: 13%;
+    left: 0%;
+    top: 10%;
     position: absolute;
   }
 
   .hb-atright {
-    left: 84%;
-    top: 13%;
+    right: 0%;
+    top: 10%;
     position: absolute;
   }
 
   .hb-top {
     position: absolute;
-    top: -161px;
-    left: 36%;
+    top: -325px;
+    left: 29%;
+    z-index: 0;
+ 
   }
 
   .hb-top img {
-    height: 300px;
-    width: 392px;
-}
+    height: 456px;
+    width: 476px;
+  }
+
+  .hb-call {
+    z-index: 1;
+  }
 
   .hb-actions {
     position: absolute;
@@ -179,10 +172,11 @@
     align-items: center;
     gap: 4rem;
     margin-bottom: -1.5rem;
+    /* backdrop-filter: blur(5px); */
     display: inline-flex;
     z-index: 2;
     margin-top: 0px;
-    top: 535px;
+    top: 79.5%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -218,7 +212,7 @@
   }
 
   .hb-customers-badge {
-    background-color: rgb(237 227 227);
+    background-color: rgb(252, 252, 252);
     display: inline-flex;
 
     padding: 0.5rem 1.5rem;
@@ -257,7 +251,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 3rem;
     border: 1px solid white;
     border-radius: 32px;
@@ -267,9 +261,13 @@
     z-index: 1;
     margin-left: auto;
     margin-right: auto;
-    top: 102%;
+    top: 103%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .hb-actions a {
+    z-index: 1;
   }
 
   .hb-stat-card {
@@ -296,7 +294,7 @@
     font-size: 0.85rem;
   }
 
-
+  /* Mobile Menu Button */
   .menu-toggle {
     display: none;
     flex-direction: column;
@@ -312,147 +310,54 @@
     transition: 0.3s;
   }
 
-  .hb-container {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    padding: clamp(20px, 5vw, 40px) clamp(10px, 3vw, 20px);
-    text-align: center;
-}
+  
 
-.title {
-    margin-bottom: 2rem;
-    padding: 0 clamp(10px, 3vw, 30px);
-}
-
-.title h3 {
-    font-size: clamp(1.1rem, 3vw, 1.3rem);
-    color: #333;
-    font-weight: bolder;
-    line-height: 1.4;
-}
-
-/* Wrapper for the scrolling container */
-.logos-wrapper {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    padding: clamp(10px, 3vw, 20px) 0;
-    background: white;
-    margin: 1rem 0;
-}
-
-.client-logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: clamp(20px, 4vw, 40px);
-    animation: scrolling 10s linear infinite;
-    white-space: nowrap;
-    width: fit-content;
-}
-
-@keyframes scrolling {
-    0% {
-        transform: translateX(0);
+  @media (max-width: 1100px) {
+    .hb-stats-container {
+      max-width: 800px;
     }
-    100% {
-        transform: translateX(-50%);
+    .hb-atlft {
+      display: none;
     }
-}
-
-.client-logo {
-    height: clamp(25px, 5vw, 40px);
-    object-fit: contain;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-    background-color: #ffffff;
-    flex-shrink: 0;
-}
-
-.client-logo:hover {
-    opacity: 1;
-}
-
-.certification-section {
-    padding: clamp(1rem, 3vw, 2rem) clamp(0.5rem, 2vw, 1rem);
-    text-align: center;
-    margin-top: 1rem;
-}
-
-.certification-title {
-    font-size: clamp(1.1rem, 3vw, 1.3rem);
-    color: #333;
-    margin-bottom: clamp(1rem, 4vw, 2rem);
-    padding: 0 clamp(10px, 3vw, 30px);
-}
-
-.certification-logos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: clamp(1rem, 4vw, 2rem);
-}
-
-.certification-logo {
-    width: min(350px, 90%);
-    height: auto;
-    max-width: 100%;
-}
-
-/* Media Queries */
-@media screen and (max-width: 768px) {
-    .client-logos {
-        animation-duration: 15s; /* Slightly faster on mobile */
+    .hb-atright {
+      display: none;
     }
 
-    .title {
-        margin-bottom: 1.5rem;
+    .hb-actions {
+      top: 79.5%;
     }
 
-    .certification-section {
-        margin-top: 0.5rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .client-logos {
-        gap: 15px; /* Reduce gap on very small screens */
+    .hb-atlft {
+      top: 8.3%;
     }
 
-    .certification-logo {
-        width: 95%; /* Almost full width on mobile */
+    .hb-atright {
+      top: 8.3%;
     }
-}
+    .hb-net {
+      max-width: 1000px;
+      width: 100%;
+    }
+  }
 
-/* For devices that prefer reduced motion */
-@media (prefers-reduced-motion: reduce) {
-    .client-logos {
-        animation-duration: 30s; /* Slower animation */
-    }
-}
-
-/* For very large screens */
-@media screen and (min-width: 1400px) {
-    .hb-container {
-        max-width: 1400px;
-    }
-
-    .client-logo {
-        height: 45px;
-    }
-}
-  @media (max-width: 768px) {
+  /* Responsive adjustments */
+  @media (max-width: 868px) {
     .hb-actions {
       position: relative;
+      top: 58px;
+      left: 180px;
+    }
+
+    .hb-hero-section {
+      top: -65px;
     }
 
     .hb-stats-container {
       position: relative;
-      margin-top: 120px;
+      top: 77px;
     }
 
-    .client-logos,
+    .hb-client-logos,
     .certification-logos {
       gap: 20px;
     }
@@ -463,6 +368,9 @@
 
     .certification-logo {
       height: 40px;
+    }
+    .hb-nav-links {
+      gap: 1rem;
     }
 
     .hb-net {
@@ -482,6 +390,7 @@
     }
   }
 
+  /* Updated media queries for better mobile responsiveness */
   @media (max-width: 768px) {
     .hb-hero-section {
       padding: 4rem 1rem;
@@ -502,6 +411,7 @@
       background: white;
       padding: 1rem;
       border-radius: 0 0 20px 20px;
+      z-index: 2;
     }
 
     .hb-nav-links.active {
@@ -523,6 +433,11 @@
       font-size: 0.95rem;
     }
 
+    .hb-part2 {
+      position: relative;
+      top: 100px;
+    }
+
     .hb-customers-badge {
       gap: 1rem;
     }
@@ -531,6 +446,13 @@
       display: none;
     }
 
+    .hb-actions {
+      position: relative;
+      top: 8px;
+      left: 165px;
+      z-index: 0;
+    }
+
     .hb-atlft {
       display: none;
     }
@@ -539,16 +461,72 @@
       display: none;
     }
 
+    .hb-stats-container {
+      position: relative;
+      top: 100px;
+    }
+
     .hb-top {
       display: none;
     }
   }
 
+  @media (max-width: 360px) {
+    .hb-hero-section {
+      top: 36px;
+    }
 
-@media (max-width: 380px) {
-.hb-hero-section {
+    .net img {
+      display: none;
+    }
+
+    .hb-point {
+      display: none;
+    }
+
+    .hb-cta-button {
+      display: none;
+    }
+
+    .hb-stats-container {
+      position: relative;
+      top: 178px;
+    }
+
+    .hb-actions {
+      position: relative;
+      top: -61px;
+      z-index: 2;
+    }
+
+    .hb-nav-links {
+      z-index: 3;
+    }
+
+    .hb-igr,
+    .hb-igl {
+      display: none;
+    }
+
+    .hb-a {
+      position: relative;
+      left: -24px;
+      top: -34px;
+    }
+    .hb-main {
+      height: 1032px;
+    }
+  }
+
+  @media only screen and (min-width: 361px) and (max-width: 380px) {
+    .hb-hero-section {
       padding: 3rem 0.5rem;
-      top: 0%;
+      top: 2%;
+    }
+
+    .hb-part2 {
+      position: relative;
+      top: 0px;
     }
 
     .hb-title {
@@ -556,6 +534,7 @@
     }
 
     .hb-nav {
+      width: 336px;
       padding: 0.4rem 0.8rem;
     }
 
@@ -575,7 +554,8 @@
     .hb-stats-container {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 0.8rem;
-      margin-top: 112px;
+      margin-top: 13px;
+      z-index: 0;
     }
 
     .hb-stat-number {
@@ -587,8 +567,9 @@
     }
 
     .hb-customers-badge {
-      gap: 1.3rem;
-      padding: 0.4rem 1rem;
+      gap: 11px;
+      padding: 0.4rem 0.5rem;
+      background-color: rgb(242, 243, 245);
     }
 
     .hb-stats {
@@ -602,17 +583,6 @@
       gap: 42px;
     }
 
-    .net img {
-      width: 152px;
-      height: 58px;
-    }
-
-    .net p {
-      top: 151px;
-      left: 28%;
-      width: 173px;
-    }
-
     .hb-point img {
       height: 43px;
       width: 43px;
@@ -624,31 +594,39 @@
     }
 
     .hb-actions {
-      margin-top: 50px;
+      margin-top: 70px;
       top: 58%;
-      left: 49%;
+      left: 39%;
+      z-index: 1;
     }
+
     .hb-a {
+      max-width: 363px;
+      width: 100%;
       left: 10px;
     }
 
-    .hb-atlft {
-      display: none;
-    }
-
-    .hb-atright {
-      display: none;
-    }
-
+    .hb-atlft,
+    .hb-atright,
     .hb-top {
       display: none;
+    }
+
+    .hb-call {
+      font-size: 12px;
+      z-index: 1;
     }
   }
 
   @media only screen and (max-width: 400px) and (min-width: 380px) {
     .hb-hero-section {
       padding: 3rem 0.5rem;
-      top: 0%;
+      top: 1%;
+    }
+
+    .hb-part2 {
+      position: relative;
+      top: 0px;
     }
 
     .hb-title {
@@ -656,6 +634,7 @@
     }
 
     .hb-nav {
+      width: 336px;
       padding: 0.4rem 0.8rem;
     }
 
@@ -675,7 +654,8 @@
     .hb-stats-container {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 0.8rem;
-      margin-top: 103px;
+      margin-top: 4px;
+      z-index: 0;
     }
 
     .hb-stat-number {
@@ -687,8 +667,9 @@
     }
 
     .hb-customers-badge {
-      gap: 1.3rem;
-      padding: 0.4rem 1rem;
+      gap: 11px;
+      padding: 0.4rem 0.5rem;
+      background-color: rgb(242, 243, 245);
     }
 
     .hb-stats {
@@ -702,17 +683,6 @@
       gap: 42px;
     }
 
-    .net img {
-      width: 152px;
-      height: 58px;
-    }
-
-    .net p {
-      top: 151px;
-      left: 27%;
-      width: 173px;
-    }
-
     .hb-point img {
       height: 43px;
       width: 43px;
@@ -724,37 +694,47 @@
     }
 
     .hb-actions {
-      margin-top: 50px;
+      margin-top: 70px;
       top: 58%;
-      left: 47%;
+      left: 37%;
+      z-index: 1;
     }
+
     .hb-a {
+      max-width: 363px;
+      width: 100%;
       left: 10px;
     }
 
-    .hb-atlft {
-      display: none;
-    }
-
-    .hb-atright {
-      display: none;
-    }
-
+    .hb-atlft,
+    .hb-atright,
     .hb-top {
       display: none;
     }
+
+    .hb-call {
+      font-size: 12px;
+      z-index: 1;
+    }
   }
+
   @media only screen and (max-width: 420px) and (min-width: 401px) {
     .hb-hero-section {
       padding: 3rem 0.5rem;
       top: 0%;
     }
 
+    .hb-part2 {
+      position: relative;
+      top: 0px;
+    }
+
     .hb-title {
       font-size: 1.8rem;
     }
 
     .hb-nav {
+      width: 336px;
       padding: 0.4rem 0.8rem;
     }
 
@@ -774,7 +754,8 @@
     .hb-stats-container {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 0.8rem;
-      margin-top: 95px;
+      margin-top: -6px;
+      z-index: 0;
     }
 
     .hb-stat-number {
@@ -786,30 +767,20 @@
     }
 
     .hb-customers-badge {
-      gap: 1.3rem;
-      padding: 0.4rem 1rem;
+      gap: 11px;
+      padding: 0.4rem 0.5rem;
+      background-color: rgb(242, 243, 245);
     }
 
     .hb-stats {
-      font-size: 0.95rem;
+      font-size: 1.1rem;
       padding: 0 0.5rem;
     }
 
     .net {
       display: flex;
-      margin-left: 10px;
+      margin-left: 20px;
       gap: 42px;
-    }
-
-    .net img {
-      width: 152px;
-      height: 58px;
-    }
-
-    .net p {
-      top: 151px;
-      left: 25%;
-      width: 173px;
     }
 
     .hb-point img {
@@ -823,30 +794,39 @@
     }
 
     .hb-actions {
-      margin-top: 50px;
+      margin-top: 70px;
       top: 58%;
-      left: 44%;
+      left: 35%;
+      z-index: 1;
     }
+
     .hb-a {
+      max-width: 363px;
+      width: 100%;
       left: 10px;
     }
 
-    .hb-atlft {
-      display: none;
-    }
-
-    .hb-atright {
-      display: none;
-    }
-
+    .hb-atlft,
+    .hb-atright,
     .hb-top {
       display: none;
+    }
+
+    .hb-call {
+      font-size: 12px;
+      z-index: 1;
     }
   }
-   @media only screen and (max-width: 440px) and (min-width: 421px) {
+
+  @media only screen and (max-width: 440px) and (min-width: 421px) {
     .hb-hero-section {
       padding: 3rem 0.5rem;
-      top: 0%;
+      top: 1%;
+    }
+
+    .hb-part2 {
+      position: relative;
+      top: 0px;
     }
 
     .hb-title {
@@ -854,6 +834,7 @@
     }
 
     .hb-nav {
+      width: 336px;
       padding: 0.4rem 0.8rem;
     }
 
@@ -873,7 +854,8 @@
     .hb-stats-container {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 0.8rem;
-      margin-top: 95px;
+      margin-top: -5px;
+      z-index: 0;
     }
 
     .hb-stat-number {
@@ -885,30 +867,20 @@
     }
 
     .hb-customers-badge {
-      gap: 1.3rem;
-      padding: 0.4rem 1rem;
+      gap: 11px;
+      padding: 0.4rem 0.5rem;
+      background-color: rgb(242, 243, 245);
     }
 
     .hb-stats {
-      font-size: 0.95rem;
+      font-size: 1.1rem;
       padding: 0 0.5rem;
     }
 
     .net {
       display: flex;
-      margin-left: 10px;
+      margin-left: 31px;
       gap: 42px;
-    }
-
-    .net img {
-      width: 152px;
-      height: 58px;
-    }
-
-    .net p {
-      top: 151px;
-      left: 105px;
-      width: 173px;
     }
 
     .hb-point img {
@@ -922,23 +894,26 @@
     }
 
     .hb-actions {
-      margin-top: 50px;
+      margin-top: 70px;
       top: 58%;
-      left: 42%;
+      left: 34%;
+      z-index: 1;
     }
+
     .hb-a {
+      max-width: 363px;
+      width: 100%;
       left: 10px;
     }
 
-    .hb-atlft {
-      display: none;
-    }
-
-    .hb-atright {
-      display: none;
-    }
-
+    .hb-atlft,
+    .hb-atright,
     .hb-top {
       display: none;
+    }
+
+    .hb-call {
+      font-size: 12px;
+      z-index: 1;
     }
   }

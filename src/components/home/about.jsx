@@ -9,13 +9,13 @@ export default function about() {
             <div className="ra-blogs">
               <div className="ra-logox">
                 <img
-                  src="https://thumbs.dreamstime.com/b/icon-encountered-face-encountered-262590375.jpg"
+                  src="https://i.ibb.co/fFLGGdP/aboutus.png"
                   alt="aboutsS Logo"
                   className="ra-blogs-logo"
                 />
               </div>
               <div className="ra-logo-text">
-                <span>About</span>
+                <span>About Us</span>
               </div>
             </div>
             <h2 class="artbox-subtitle">Discover Our Creative Agency Story</h2>

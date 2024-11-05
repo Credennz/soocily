@@ -34,27 +34,6 @@ const articles = [
 ];
 
 const Blogs = () => {
-  const [currentArticleId, setCurrentArticleId] = useState(null);
-
-  useEffect(() => {
-    const handleRouteChange = () => {
-      const hash = window.location.hash;
-      if (hash.startsWith("#article/")) {
-        const id = parseInt(hash.split("/")[1]);
-        setCurrentArticleId(id);
-      } else {
-        setCurrentArticleId(null);
-      }
-    };
-
-    window.addEventListener("hashchange", handleRouteChange);
-    handleRouteChange(); // Initial render based on current hash
-
-    return () => {
-      window.removeEventListener("hashchange", handleRouteChange);
-    };
-  }, []);
-
   return (
     <div className="ra-container">
       <center>
@@ -71,7 +50,7 @@ const Blogs = () => {
           </div>
         </div>
       </center>
-      {currentArticleId ? <ArticlePage id={currentArticleId} /> : <HomePage />}
+      <HomePage />
     </div>
   );
 };
@@ -91,7 +70,7 @@ const HomePage = () => (
                 Uploaded by {article.uploadedBy}
               </div>
               <a
-                href={`#article/${article.id}`}
+                href={`/article.html?id=${article.id}`}
                 className="ra-read-more-btn"
                 aria-label={`Read more about ${article.title}`}
               >
@@ -104,33 +83,5 @@ const HomePage = () => (
     </div>
   </div>
 );
-
-const ArticlePage = ({ id }) => {
-  const article = articles.find((a) => a.id === id);
-
-  if (!article) {
-    return (
-      <div className="ra-modal-content">
-        <h2 className="ra-modal-title">Article not found</h2>
-        <a href="#" className="ra-back-btn">
-          ← Back to Home
-        </a>
-      </div>
-    );
-  }
-
-  return (
-    <div className="ra-modal-content">
-      <h2 className="ra-modal-title">{article.title}</h2>
-      <p className="ra-modal-meta">
-        {article.date} | Uploaded by {article.uploadedBy}
-      </p>
-      <div>{article.fullContent}</div>
-      <a href="#" className="ra-back-btn">
-        ← Back
-      </a>
-    </div>
-  );
-};
 
 export default Blogs;

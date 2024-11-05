@@ -10,7 +10,10 @@
     align-items: center;
     gap: 2rem;
 }
-
+.ra-logox img{
+    height: 100%;
+    width: 30px;
+}
 .artbox-about-content {
     flex: 1 1 500px;
 }
@@ -87,7 +90,7 @@
 img {
     max-width: 100%;
     height: auto;
-    border-radius: 1.5rem;
+    border-radius: .5rem;
 }
 
 @media (max-width: 768px) {
