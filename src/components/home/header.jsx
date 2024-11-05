@@ -47,10 +47,9 @@ export default function Header() {
               For More ROI
             </h1>
             <p className="hb-stats">
-              <b>
-                5+ Years of Expertise | 53+ Brands Collaborated | 2+ Cr. in Ad
-                Spend
-              </b>
+              <strong>5+ Years </strong>of Expertise |{" "}
+              <strong> 53+ Brands</strong> Collaborated | <strong>2+ Cr</strong>
+              . in Ad Spend
             </p>
           </div>
 

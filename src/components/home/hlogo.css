@@ -5,17 +5,25 @@ hb-container {
     padding: clamp(20px, 5vw, 40px) clamp(10px, 3vw, 20px);
     text-align: center;
   }
-   
-  .title {
+  .client-logos {
+    animation-duration: 85s;
+  }
+  .htitle {
+    margin-top: 50px;
     margin-bottom: 2rem;
     padding: 0 clamp(10px, 3vw, 30px);
   }
    
-  .title h3 {
-    font-size: clamp(1.1rem, 3vw, 1.3rem);
+  .htitle h3 {
+
     color: #333;
-    font-weight: bolder;
-    line-height: 1.4;
+   
+    
+    font-family: Instrument Sans;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20.4px;
+    text-align: center;
   }
    
   .logos-wrapper {
@@ -65,7 +73,7 @@ hb-container {
     margin-top: 1rem;
   }
    
-  .certification-title {
+  .certification-htitle {
     font-size: clamp(1.1rem, 3vw, 1.3rem);
     color: #333;
     margin-bottom: clamp(1rem, 4vw, 2rem);
@@ -87,7 +95,7 @@ hb-container {
    
   @media screen and (max-width: 768px) {
     .client-logos {
-      animation-duration: 20s;
+      animation-duration: 90s;
     }
   }
    

@@ -25,7 +25,7 @@ const logos = [
 export default function LogoCarousel() {
   return (
     <div className="hb-container">
-      <div className="title">
+      <div className="htitle">
         <h3>Trusted by clients for output that matters to the business</h3>
       </div>
 

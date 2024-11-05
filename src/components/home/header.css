@@ -71,6 +71,11 @@
     color: black;
     text-decoration: none;
     font-size: 0.95rem;
+    font-family: Instrument Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
   }
 
   .hb-contact-btn {
@@ -118,14 +123,24 @@
   }
 
   .hb-title {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 500;
+    /* font-size: clamp(2rem, 5vw, 3.5rem); */
+   
     margin-bottom: 1rem;
+    font-family: Inter;
+    font-size: 56.84px;
+    font-weight: 500;
+  
+    text-align: center;
     line-height: 1.2;
   }
 
   .hb-stats {
-    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-family: Instrument Sans;
+    font-size: 18px;
+    /* font-weight: 700; */
+    line-height: 27px;
+    text-align: center;
+    /* font-size: clamp(0.9rem, 2vw, 1rem); */
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 1.5rem;
   }
@@ -138,13 +153,13 @@
 
   .hb-atlft {
     left: 0%;
-    top: 10%;
+    top: 10.5%;
     position: absolute;
   }
 
   .hb-atright {
     right: 0%;
-    top: 10%;
+    top: 10.5%;
     position: absolute;
   }
 
@@ -162,6 +177,11 @@
   }
 
   .hb-call {
+    font-family: Instrument Sans;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
     z-index: 1;
   }
 
@@ -450,7 +470,7 @@
       position: relative;
       top: 8px;
       left: 165px;
-      z-index: 0;
+      z-index: 1;
     }
 
     .hb-atlft {
@@ -473,7 +493,7 @@
 
   @media (max-width: 360px) {
     .hb-hero-section {
-      top: 36px;
+      top: 26px;
     }
 
     .net img {
@@ -514,7 +534,7 @@
       top: -34px;
     }
     .hb-main {
-      height: 1032px;
+             height: 1285px;
     }
   }
 
