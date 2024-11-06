@@ -3,7 +3,7 @@ import React from "react";
 export default function industry() {
   return (
     <div>
-      <div class="ss">
+      <div id="features" class="ss">
         <div class="p1-container">
           <div class="left-column">
             <h1>Industries</h1>
@@ -17,42 +17,42 @@ export default function industry() {
             <div class="industry-list">
               <div class="industry-column">
                 <div class="industry-item">
-                  <span class="checkmark"></span>Real-Estate
+                  <span class="icheckmark"></span>Real-Estate
                 </div>
                 <div class="industry-item">
-                  <span class="checkmark"></span>Finance and Banking
+                  <span class="icheckmark"></span>Finance and Banking
                 </div>
                 <div class="industry-item">
-                  <span class="checkmark"></span>Restaurants
+                  <span class="icheckmark"></span>Restaurants
                 </div>
                 <div class="industry-item">
-                  <span class="checkmark"></span>FMCG Manufacturers
+                  <span class="icheckmark"></span>FMCG Manufacturers
                 </div>
                 <div class="industry-item">
-                  <span class="checkmark"></span>Retail and Service Outlets
+                  <span class="icheckmark"></span>Retail and Service Outlets
                 </div>
                 <div class="industry-item">
-                  <span class="checkmark"></span>E-Commerce
+                  <span class="icheckmark"></span>E-Commerce
                 </div>
               </div>
               <div class="industry-column">
                 <div class="industry-item">
-                  <span class="checkmark"></span>Coaches and Consultants
+                  <span class="icheckmark"></span>Coaches and Consultants
                 </div>
                 <div class="industry-item">
-                  <span class="checkmark"></span>Startups
+                  <span class="icheckmark"></span>Startups
                 </div>
                 <div class="industry-item">
-                  <span class="checkmark"></span>Travel and Hospitality
+                  <span class="icheckmark"></span>Travel and Hospitality
                 </div>
                 <div class="industry-item">
-                  <span class="checkmark"></span>IT and Saas
+                  <span class="icheckmark"></span>IT and Saas
                 </div>
                 <div class="industry-item">
-                  <span class="checkmark"></span>Fashion and Beauty
+                  <span class="icheckmark"></span>Fashion and Beauty
                 </div>
                 <div class="industry-item">
-                  <span class="checkmark"></span>Professional Services
+                  <span class="icheckmark"></span>Professional Services
                 </div>
               </div>
             </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function about() {
   return (
-    <div>
+    <div id="about">
       <div class="artbox-container">
         <section class="artbox-about-section">
           <div class="artbox-about-content">

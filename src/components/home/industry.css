@@ -82,17 +82,17 @@ p {
     padding-left: 38px;
     margin-top: 20px;
 }
-.checkmark {
+.icheckmark {
     width: 20px;
     height: 20px;
-    background-color: #4caf50;
+    background-color: #07c51a;
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     margin-right: 10px;
 }
-.checkmark::before {
+.icheckmark::before {
     content: "\2714";
     color: white;
     font-size: 12px;

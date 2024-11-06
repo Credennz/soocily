@@ -62,6 +62,10 @@ hb-container {
     background-color: #ffffff;
     flex-shrink: 0;
   }
+   .certification-title{
+    padding-bottom: 15px;
+   }
+         
    
   .client-logo:hover {
     opacity: 1;

@@ -10,13 +10,7 @@
   }
 
   .hb-main {
-    background: linear-gradient(
-      180deg,
-      #6b2c94 0%,
-      #8e3a9d 30%,
-      #b75e4d 70%,
-      #e6855f 100%
-    );
+    background: linear-gradient(180deg, #731C9E 30%, #C38049 100%);
     height: 900px;
     color: white;
     line-height: 1.6;
@@ -79,14 +73,22 @@
   }
 
   .hb-contact-btn {
-    background: linear-gradient(180deg, #731c9e 0%, #c38049 100%);
-    color: #6a1b9a;
+    background: linear-gradient(90deg, #731c9e 0%, #c38049 100%);
+    color: white;
     padding: 0.5rem 1rem;
     border-radius: 25px;
     transition: transform 0.3s ease;
-    margin-left: 100px;
+    margin-left: 70px;
+    width: 100px;
+    height: 50px;
+    margin-right: -22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-
+.hb-contact-btn{
+  color: white;
+}
   .hb-contact-btn:hover {
     transform: translateY(-2px);
   }
@@ -232,9 +234,8 @@
   }
 
   .hb-customers-badge {
-    background-color: rgb(252, 252, 252);
+    background-color: rgb(206, 156, 167);
     display: inline-flex;
-
     padding: 0.5rem 1.5rem;
     border-radius: 20px;
     align-items: center;
@@ -272,16 +273,18 @@
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
     margin-top: 1rem;
-    padding: 3rem;
+    padding: 1rem;
+    padding-top: 3rem;
     border: 1px solid white;
     border-radius: 32px;
     background: rgba(255, 255, 255, 0.05);
     max-width: 1180px;
     width: 100%;
+    height: 243px;
     z-index: 1;
     margin-left: auto;
     margin-right: auto;
-    top: 103%;
+    top: 104.3%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -306,7 +309,7 @@
   .hb-stat-number {
     color: black;
     font-size: 2rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
   }
 
   .hb-stat-label {
@@ -369,13 +372,13 @@
     }
 
     .hb-hero-section {
-      top: -65px;
+      top: -20px;
     }
 
     .hb-stats-container {
       position: relative;
-      top: 77px;
-    }
+      top: 87px;
+  }
 
     .hb-client-logos,
     .certification-logos {
@@ -414,9 +417,16 @@
   @media (max-width: 768px) {
     .hb-hero-section {
       padding: 4rem 1rem;
-      top: 10px;
+      top: -175px;
     }
-
+    .hb-stat-number {
+      color: black;
+      font-size: 2rem;
+      margin-top: 0.5rem;
+  }
+.hb-main{
+  height: 1050px;
+}
     .menu-toggle {
       display: flex;
     }
@@ -468,9 +478,9 @@
 
     .hb-actions {
       position: relative;
-      top: 8px;
-      left: 165px;
-      z-index: 1;
+      top: 5px;
+      /* left: 165px; */
+      z-index: 2;
     }
 
     .hb-atlft {
@@ -483,17 +493,38 @@
 
     .hb-stats-container {
       position: relative;
-      top: 100px;
-    }
+      top: 37px;
+  }
 
     .hb-top {
       display: none;
+    }
+    .hb-stats-container{
+      position: absolute;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    padding-top: 3rem;
+    border: 1px solid white;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.05);
+    max-width: 1180px;
+    width: 100%;
+    height: 348px;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    top: 165.3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     }
   }
 
   @media (max-width: 360px) {
     .hb-hero-section {
-      top: 26px;
+      top: 10px;
     }
 
     .net img {
@@ -510,8 +541,10 @@
 
     .hb-stats-container {
       position: relative;
-      top: 178px;
+      top: 214px;
+      height: 624px;
     }
+   
 
     .hb-actions {
       position: relative;
@@ -529,10 +562,12 @@
     }
 
     .hb-a {
-      position: relative;
-      left: -24px;
-      top: -34px;
+      
+        position: relative;
+        left: -37px;
+        top: 11px;
     }
+  
     .hb-main {
              height: 1285px;
     }
@@ -541,7 +576,7 @@
   @media only screen and (min-width: 361px) and (max-width: 380px) {
     .hb-hero-section {
       padding: 3rem 0.5rem;
-      top: 2%;
+      top: -15%;
     }
 
     .hb-part2 {
@@ -574,7 +609,7 @@
     .hb-stats-container {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 0.8rem;
-      margin-top: 13px;
+      margin-top: -89px;
       z-index: 0;
     }
 
@@ -614,7 +649,7 @@
     }
 
     .hb-actions {
-      margin-top: 70px;
+      margin-top: 155px;
       top: 58%;
       left: 39%;
       z-index: 1;
@@ -641,7 +676,7 @@
   @media only screen and (max-width: 400px) and (min-width: 380px) {
     .hb-hero-section {
       padding: 3rem 0.5rem;
-      top: 1%;
+      top: -15%;
     }
 
     .hb-part2 {
@@ -674,7 +709,7 @@
     .hb-stats-container {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 0.8rem;
-      margin-top: 4px;
+      margin-top: -131px;
       z-index: 0;
     }
 
@@ -714,7 +749,7 @@
     }
 
     .hb-actions {
-      margin-top: 70px;
+      margin-top: 220px;
       top: 58%;
       left: 37%;
       z-index: 1;
@@ -741,7 +776,7 @@
   @media only screen and (max-width: 420px) and (min-width: 401px) {
     .hb-hero-section {
       padding: 3rem 0.5rem;
-      top: 0%;
+      top: -18%;
     }
 
     .hb-part2 {
@@ -774,7 +809,7 @@
     .hb-stats-container {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 0.8rem;
-      margin-top: -6px;
+      margin-top: -33px;
       z-index: 0;
     }
 
@@ -815,9 +850,12 @@
 
     .hb-actions {
       margin-top: 70px;
-      top: 58%;
+      top: 108%;
       left: 35%;
-      z-index: 1;
+      z-index: 0;
+    }
+    .hb-main{
+      height: 960px;
     }
 
     .hb-a {
@@ -841,7 +879,7 @@
   @media only screen and (max-width: 440px) and (min-width: 421px) {
     .hb-hero-section {
       padding: 3rem 0.5rem;
-      top: 1%;
+      top: -15%;
     }
 
     .hb-part2 {
@@ -874,7 +912,7 @@
     .hb-stats-container {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 0.8rem;
-      margin-top: -5px;
+      margin-top: -111px;
       z-index: 0;
     }
 
@@ -914,7 +952,7 @@
     }
 
     .hb-actions {
-      margin-top: 70px;
+      margin-top: 189px;
       top: 58%;
       left: 34%;
       z-index: 1;

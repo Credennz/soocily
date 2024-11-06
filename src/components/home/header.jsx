@@ -32,7 +32,11 @@ export default function Header() {
                 <a href="#pricing">Pricing</a>
                 <a href="#about">About</a>
                 <a href="#works">Works</a>
-                <a href="#contact" className="hb-contact-btn">
+                <a
+                  href="#contact"
+                  style={{ color: "white" }}
+                  className="hb-contact-btn"
+                >
                   Contact
                 </a>
               </div>

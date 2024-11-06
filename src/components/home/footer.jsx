@@ -45,7 +45,7 @@ export default function footer() {
         </div>
         <hr />
         <div class="tf-x">
-          <div class="tf-attribution">Developed by credenzz.com</div>
+          <div class="tf-attribution">Developed by credennz.com</div>
           <div class="tf-social-icons">
             <a href="#">
               <img src="/img/linkdin.png" alt="LinkedIn" />

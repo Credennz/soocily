@@ -35,7 +35,7 @@ const articles = [
 
 const Blogs = () => {
   return (
-    <div className="ra-container">
+    <div id="pricing" className="ra-container">
       <center>
         <div className="ra-blogs">
           <div className="ra-logox">

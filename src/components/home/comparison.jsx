@@ -2,7 +2,7 @@ import React from "react";
 
 export default function comparison() {
   return (
-    <div>
+    <div id="works">
       <div class="comparison-container">
         <div
           className="comparison-badge"

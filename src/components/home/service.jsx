@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Service() {
   return (
-    <div class="ssv">
+    <div id="services" class="ssv">
       <div class="lcontainer">
         <div class="lservice">
           <div class="lservice_logo">
