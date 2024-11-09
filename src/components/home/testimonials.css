@@ -211,7 +211,15 @@
 
     
     .tf-x{
-        display: inline;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+    .tf-social-icons {
+        display: flex;
+        gap: 10px;
+        /* top: 20px; */
+        justify-content: center;
     }
 
     @keyframes scroll {
