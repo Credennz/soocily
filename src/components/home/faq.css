@@ -22,18 +22,20 @@
 }
 
 .tf-faq-item button {
-    width: 100%; /* Full width */
+    width: 100%;
     background-color: #f4f7ff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: none;
-    padding: 10px; /* Reduced padding */
+    border: #E1E4EB;
+    padding: 10px;
     text-align: left;
-    font-size: 1em; /* Adjusted font size */
+    border: 1px solid;
+    border-color: #bec1c4;
+    font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border-radius: 10px; /* Slightly smaller border radius */
+    border-radius: 10px;
 }
 
 .tf-faq-item button:hover {

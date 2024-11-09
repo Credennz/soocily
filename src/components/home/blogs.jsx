@@ -40,7 +40,7 @@ const Blogs = () => {
         <div className="ra-blogs">
           <div className="ra-logox">
             <img
-              src="../img/blogs.png"
+              src="../img/blogs_logo.svg"
               alt="blogs Logo"
               className="ra-blogs-logo"
             />

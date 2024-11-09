@@ -6,7 +6,7 @@ hb-container {
     text-align: center;
   }
   .client-logos {
-    animation-duration: 85s;
+    animation-duration: 55s;
   }
   .htitle {
     margin-top: 50px;
@@ -99,13 +99,16 @@ hb-container {
    
   @media screen and (max-width: 768px) {
     .client-logos {
-      animation-duration: 90s;
+      animation-duration: 100s;
     }
   }
    
   @media screen and (max-width: 480px) {
     .client-logos {
       gap: 15px;
+    }
+    .client-logos {
+      animation-duration: 100s;
     }
   }
    

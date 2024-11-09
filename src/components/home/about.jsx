@@ -9,7 +9,7 @@ export default function about() {
             <div className="ra-blogs">
               <div className="ra-logox">
                 <img
-                  src="https://i.ibb.co/fFLGGdP/aboutus.png"
+                  src="../img/aboutus_logo.svg"
                   alt="aboutsS Logo"
                   className="ra-blogs-logo"
                 />

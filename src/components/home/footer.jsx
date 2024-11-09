@@ -30,10 +30,7 @@ export default function footer() {
             <b />
             Works
           </button>
-          <button>
-            <b />
-            404
-          </button>
+
           <button>
             <b />
             Contact
@@ -48,13 +45,13 @@ export default function footer() {
           <div class="tf-attribution">Developed by credennz.com</div>
           <div class="tf-social-icons">
             <a href="#">
-              <img src="/img/linkdin.png" alt="LinkedIn" />
+              <img src="/img/Linkedin_logo.svg" alt="LinkedIn" />
             </a>
             <a href="#">
-              <img src="/img/x.png" alt="Twitter" />
+              <img src="/img/twitter_logo.svg" alt="Twitter" />
             </a>
             <a href="#">
-              <img src="/img/insta.png" alt="Instagram" />
+              <img src="/img/insta_logo.svg" alt="Instagram" />
             </a>
           </div>
 

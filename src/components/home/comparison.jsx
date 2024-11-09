@@ -9,7 +9,7 @@ export default function comparison() {
           style={{ display: "flex", alignItems: "center" }}
         >
           <img
-            src="https://png.pngtree.com/png-vector/20231214/ourmid/pngtree-three-dimensional-purple-trophy-award-honorary-award-winning-podium-png-image_11344611.png"
+            src="../img/comparison_logo.svg"
             alt="Trophy Icon"
             width="24"
             height="20"

@@ -6,7 +6,7 @@ export default function Service() {
       <div class="lcontainer">
         <div class="lservice">
           <div class="lservice_logo">
-            <img src="../img/service-l.png" alt="ServiceLogo" />
+            <img src="../img/service_logo.svg" alt="ServiceLogo" />
           </div>
           <div class="lservice_name">
             <span>Services</span>

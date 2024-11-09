@@ -2,6 +2,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    margin-top: 80px;
 }
 
 .artbox-about-section {
@@ -62,12 +63,15 @@
 }
 
 .artbox-btn-primary {
-    background-color: #9333ea;
-    color: white;
+    background-color: white;
+    color: #4b5563;
+    border: 1px solid #d1d5db;
 }
 
+
 .artbox-btn-primary:hover {
-    background: linear-gradient(180deg, #9F54F7 0%, #8523F5 100%);
+    background-color: #9333ea;
+    color: white;
 }
 
 .artbox-btn-secondary {
@@ -77,8 +81,10 @@
 }
 
 .artbox-btn-secondary:hover {
-    background-color: #f3f4f6;
-}
+   
+        background-color: #9333ea;
+        color: white;
+    }
 
 .artbox-btn svg {
     width: 1rem;
@@ -94,6 +100,12 @@ img {
 }
 
 @media (max-width: 768px) {
+    .artbox-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+        margin-top: 10px;
+    }
     .artbox-about-section {
         flex-direction: column;
     }
