@@ -5,7 +5,7 @@ export default function footer() {
     <div>
       <footer>
         <img class="tf-logo" src="/img/logo.png" alt="Soochr Logo" />
-        <p>
+        <p class="p-ft">
           Experienced team delivering exceptional digital <br />
           solutions tailored to your brand.
         </p>

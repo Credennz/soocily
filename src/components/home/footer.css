@@ -19,7 +19,7 @@
     flex-wrap: wrap;
     /* justify-content: space-between; */
     gap: 10px;
-    margin-bottom: 90px;
+    margin-bottom: 60px;
     }
 
     .tf-footer-links button {
@@ -45,6 +45,12 @@
     justify-content: space-between;
     margin: 20px;
 }
+.p-ft{
+    font-size: 17px;
+    font-weight: 500;
+    padding-bottom: 25px;
+}
+
 .tf-social-icons{
     
         display: flex;

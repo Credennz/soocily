@@ -1,12 +1,16 @@
+// App.js or Header.js
 import React, { useState } from "react";
+import ThankYouModal from "./thankYouModal";
 
-export default function Header() {
+export default function Header({ openContactModal }) {
   const [menuActive, setMenuActive] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuActive(!menuActive);
   };
+
   const openForm = () => {
     setIsFormOpen(true);
   };
@@ -17,8 +21,20 @@ export default function Header() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    // Here you can add logic to handle form data, e.g., sending it to an API.
+
+    // Simulate form submission (e.g., sending data to the server)
+    const formData = new FormData(e.target);
+    const formValues = Object.fromEntries(formData.entries());
+
+    console.log("Form submitted with values:", formValues);
+
+    // Close the form and open the thank you modal
     closeForm();
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -31,7 +47,7 @@ export default function Header() {
           <div className="hb-part1">
             <nav className="hb-nav">
               <div className="hb-logo">
-                <img src="img/logosocily.png" alt="Soocity" />
+                <img src="img/logosocily.png" alt="Soocily" />
               </div>
 
               <div className="menu-toggle" onClick={toggleMenu}>
@@ -48,6 +64,10 @@ export default function Header() {
                 <a href="#works">Works</a>
                 <a
                   href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    openContactModal();
+                  }}
                   style={{ color: "white" }}
                   className="hb-contact-btn"
                 >
@@ -70,6 +90,8 @@ export default function Header() {
               . in Ad Spend
             </p>
           </div>
+
+          {/* Form Modal */}
           {isFormOpen && (
             <div className="modal-overlay">
               <div className="modal-content">
@@ -130,6 +152,9 @@ export default function Header() {
               </div>
             </div>
           )}
+
+          {/* Thank You Modal */}
+          <ThankYouModal isOpen={isModalOpen} onClose={closeModal} />
 
           <div className="hb-part2">
             <div className="hb-net">

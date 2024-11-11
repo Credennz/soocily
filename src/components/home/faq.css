@@ -31,7 +31,7 @@
     padding: 10px;
     text-align: left;
     border: 1px solid;
-    border-color: #bec1c4;
+    border-color: #dee2e7;
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -68,7 +68,7 @@
     display: none;
     padding: 10px; /* Reduced padding */
     background-color: #fff;
-    border-top: 1px solid #E1E4EB;
+    /* border-top: 1px solid #E1E4EB; */
 }
 
 .tf-faq-item.active .tf-content {

@@ -125,8 +125,8 @@ export default function Service() {
           <div>
             <h2>Websites and UI/UX</h2>
             <p>
-              Discover a new way to work with linked any floating thought,
-              auto-sync links when your task gets live.
+              Attatch notes to your tasks with links or any fleeting thought,
+              auto open links when your task goes live.
             </p>
           </div>
           <div class="editor-interface">
@@ -158,10 +158,7 @@ export default function Service() {
         <div class="service-card">
           <div>
             <h2>Brand Shoot and TVC</h2>
-            <p>
-              Streamline your social media marketing tasks with our efficient
-              tools.
-            </p>
+            <p>Get instant reminders for upcoming tasks.</p>
           </div>
           <ul>
             <div class="Brand-item1">
@@ -170,11 +167,11 @@ export default function Service() {
             </div>
             <div class="Brand-item1">
               <span class="checkmark"></span>
-              Strategy planning
+              Strategic planning
             </div>
             <div class="Brand-item1">
               <span class="checkmark"></span>
-              Influencer and creator collaborations
+              Influencers and creators collaborations
             </div>
           </ul>
         </div>

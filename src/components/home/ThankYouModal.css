@@ -1,0 +1,64 @@
+/* ThankYouModal.css */
+.thankyou-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .thankyou-modal-content {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .thankyou-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .thankyou-modal-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+  .s-l-logo{
+    height: 50px;
+    width: 200px;
+  }
+  .thankyou-modal-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  
+  .thankyou-modal-message {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .thankyou-done-button {
+    background: linear-gradient(180deg, #731C9E 40%, #C38049 100%);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  

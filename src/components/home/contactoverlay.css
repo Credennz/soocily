@@ -1,0 +1,91 @@
+.contact-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .contact-modal-content {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+  }
+  
+  .contact-modal-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .contact-modal-close-btn:hover {
+    color: #555;
+  }
+  
+  .contact-modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-modal-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-modal-form-group label {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+  
+  .contact-modal-form-group input,
+  .contact-modal-form-group textarea {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 0.75rem 0;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color: transparent;
+  }
+  
+  .contact-modal-form-group input:focus,
+  .contact-modal-form-group textarea:focus {
+    border-color: #007bff;
+  }
+  
+  .contact-modal-submit-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .contact-modal-submit-btn:hover {
+    background-color: #0056b3;
+  }
+  

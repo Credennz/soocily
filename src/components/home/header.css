@@ -270,7 +270,7 @@
     /* font-size: clamp(2rem, 5vw, 3.5rem); */
    
     margin-bottom: 1rem;
-    font-family: Inter;
+    /* font-family: Inter; */
     font-size: 56.84px;
     font-weight: 500;
   
@@ -376,7 +376,7 @@
   }
 
   .hb-customers-badge {
-    background-color: rgb(206, 156, 167);
+    background-color: #c5a0b4;
     display: inline-flex;
     padding: 0.5rem 1.5rem;
     border-radius: 20px;
@@ -437,7 +437,7 @@
   }
 
   .hb-stat-card {
-    background: linear-gradient(180deg, #e4dddc 0%, #f0c2b8 100%);
+    background: linear-gradient(180deg, #e9dfdd 0%, #e1ccd5 100%);
     border-radius: 20px;
     padding: 1.5rem;
     transition: transform 0.3s ease;
@@ -456,8 +456,9 @@
   }
 
   .hb-stat-label {
-    color: black;
-    font-size: 0.85rem;
+    color: #656565;
+    font-weight: 600;
+    font-size: 16px;
   }
 
   /* Mobile Menu Button */
@@ -598,6 +599,7 @@
 
     .hb-contact-btn {
       margin-top: 1rem;
+      margin-right: 0px;
     }
 
     .hb-nav-links a {
@@ -735,6 +737,7 @@
     .hb-nav {
       width: 336px;
       padding: 0.4rem 0.8rem;
+      z-index: 2;
     }
 
     .hb-logo img {

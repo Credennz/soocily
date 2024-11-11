@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function about() {
+export default function about({ openContactModal }) {
   return (
     <div id="about">
       <div class="artbox-container">
@@ -28,7 +28,14 @@ export default function about() {
               results.
             </p>
             <div class="artbox-cta-buttons">
-              <a href="#" class="artbox-btn artbox-btn-primary">
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  openContactModal(); // Open the contact modal
+                }}
+                class="artbox-btn artbox-btn-primary"
+              >
                 Start a Project
               </a>
               <a href="#" class="artbox-btn artbox-btn-secondary">
