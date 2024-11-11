@@ -66,24 +66,29 @@
     background-color: white;
     color: #4b5563;
     border: 1px solid #d1d5db;
+    transition: transform 0.3s ease;
 }
 
 
 .artbox-btn-primary:hover {
     background-color: #9333ea;
     color: white;
+    transform: translateY(-2px);
 }
 
 .artbox-btn-secondary {
     background-color: white;
     color: #4b5563;
     border: 1px solid #d1d5db;
+    transition: transform 0.3s ease;
+    
 }
 
 .artbox-btn-secondary:hover {
    
         background-color: #9333ea;
         color: white;
+        transform: translateY(-2px);
     }
 
 .artbox-btn svg {

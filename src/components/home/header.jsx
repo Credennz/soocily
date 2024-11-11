@@ -1,5 +1,6 @@
 // App.js or Header.js
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import ThankYouModal from "./thankYouModal";
 
 export default function Header({ openContactModal }) {
@@ -22,15 +23,29 @@ export default function Header({ openContactModal }) {
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    // Simulate form submission (e.g., sending data to the server)
+    // Get form data
     const formData = new FormData(e.target);
     const formValues = Object.fromEntries(formData.entries());
-
     console.log("Form submitted with values:", formValues);
 
-    // Close the form and open the thank you modal
-    closeForm();
-    setIsModalOpen(true);
+    // Send email via EmailJS
+    emailjs
+      .sendForm(
+        "service_6z9pba8",
+        "template_fbe54n4",
+        e.target,
+        "EGnkr6K_W04YVhiwG"
+      )
+      .then(
+        (result) => {
+          console.log("Email sent successfully:", result.text);
+          closeForm();
+          setIsModalOpen(true); // Show the thank-you modal
+        },
+        (error) => {
+          console.error("Error sending email:", error.text);
+        }
+      );
   };
 
   const closeModal = () => {

@@ -52,11 +52,18 @@ h1 {
     text-align: center;
     font-size: 25px;
     line-height: 50px;
+    transition: transform 0.3s ease;
 }
 /* .book-call:hover {
     background-color: blue;
     color: white;
 } */
+.book-call:hover {
+   
+    background-color: #9333ea;
+    color: white;
+    transform: translateY(-2px);
+}
 .book-call img {
     width: 25px;
     color: black;
