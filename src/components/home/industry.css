@@ -1,11 +1,11 @@
 .ss {
     font-family: Arial, sans-serif;
-   
+
     margin: 0;
     padding: 20px;
-   
-        margin-top: 80px;
-    }
+
+    margin-top: 110px;
+}
 
 .p1-container {
     background: linear-gradient(180deg, #ece6f8 0%, rgba(228, 219, 246, 0) 100%);
@@ -17,85 +17,105 @@
     flex-direction: column;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .left-column {
     flex: 1;
     padding-left: 30px;
     padding-top: 40px;
 }
+
 .right-column {
     flex: 2;
     background-color: white;
     border-radius: 15px;
-    
+
 }
+
 h1 {
     font-size: 45px;
     margin-bottom: 10px;
     padding-top: 20px;
 }
+
 .left-column p {
     font-size: 20px;
     color: #666;
     margin-bottom: 30px;
 }
+
 .book-call {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #E6E9EE;
-    color: black;
+    background: rgba(230, 233, 238, 1);
+    color: #4b5563;
+    border: 1px solid #d1d5db;
+    transition: transform 0.3s ease;
     text-decoration: none;
     border-radius: 50px;
     transition: background-color 0.3s;
-    margin-top: 130px;
+    margin-top: 100px;
     width: 295px;
     /* height: 52px; */
     text-align: center;
-    font-size: 25px;
-    line-height: 50px;
+    font-size: 16px;
+    height: 52px;
+    font-weight: 600;
+    /* line-height: 50px; */
     transition: transform 0.3s ease;
 }
+
+
 /* .book-call:hover {
     background-color: blue;
     color: white;
 } */
 .book-call:hover {
-   
-    background-color: #9333ea;
+
+    background: linear-gradient(180deg, #802C90 0%, #BE7A4F 100%);
     color: white;
     transform: translateY(-2px);
 }
-.book-call img {
-    width: 25px;
+
+.aj {
+    width: 22px;
     color: black;
 }
-/* .book-call:hover {
-    background-color: #e0e0e0;
-} */
+
+.aj:hover {
+    color: #e0e0e0;
+}
+
 .right-column h2 {
     font-size: 24px;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 30px;
+   text-align: center;
 }
+
 .industry-list {
     display: flex;
     flex-wrap: wrap;
 }
+
 .industry-column {
     flex: 1;
     min-width: 200px;
     position: relative;
-    
+
 }
+
 .industry-item {
     display: flex;
     align-items: center;
-    margin-bottom: 17px;
+    margin-bottom: 10px;
     padding: 10px 0;
     border-bottom: 1px dotted #e0e0e0;
     padding-left: 38px;
-    margin-top: 20px;
+    margin-top: 1px;
 }
+
+
+
 .icheckmark {
     width: 20px;
     height: 20px;
@@ -112,10 +132,12 @@ h1 {
     .p1-container {
         flex-direction: row;
     }
+
     .left-column {
         padding-right: 40px;
         padding-bottom: 0;
     }
+
     .industry-column:first-child::after {
         content: '';
         position: absolute;
@@ -125,7 +147,7 @@ h1 {
         width: 1px;
         background-color: #e0e0e0;
     }
-    
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -137,20 +159,25 @@ h1 {
         flex-direction: column;
         align-items: center;
     }
-    .book-call{
+
+    .book-call {
         margin-top: 20px;
-    margin-bottom: 47px;
+        margin-bottom: 47px;
     }
+
     h1 {
         font-size: 35px;
         text-align: center;
     }
+
     .left-column p {
         font-size: 18px;
     }
+
     .industry-list {
         flex-direction: row;
     }
+
     .industry-column {
         flex: 1;
     }
@@ -159,16 +186,17 @@ h1 {
 @media (max-width: 767px) {
     .ss {
         font-family: Arial, sans-serif;
-       
+
         margin: 0;
         padding: 20px;
-       
-            margin-top: 10px;
-        }
-    
+
+        margin-top: 10px;
+    }
+
     .p1-container {
         padding: 30px;
     }
+
     .left-column {
         flex: 1 1;
         /* padding-left: 30px; */
@@ -177,13 +205,16 @@ h1 {
         flex-direction: column;
         align-items: center;
     }
+
     h1 {
         font-size: 30px;
     }
+
     .left-column p {
         font-size: 16px;
         text-align: center;
     }
+
     .book-call {
         width: 192px;
         font-size: 20px;
@@ -191,6 +222,7 @@ h1 {
         /* margin-left: -14%; */
         margin-top: 20px;
     }
+
     .industry-list {
         flex-direction: column;
     }

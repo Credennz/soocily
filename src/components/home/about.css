@@ -2,7 +2,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
-    margin-top: 80px;
+    margin-top: 110px;
 }
 
 .artbox-about-section {
@@ -12,8 +12,8 @@
     gap: 2rem;
 }
 .ra-logox img{
-    height: 100%;
-    width: 30px;
+    height: 96%;
+    width: 22px;
 }
 .artbox-about-content {
     flex: 1 1 500px;
@@ -23,8 +23,7 @@
     flex: 1 1 400px;
 }
 .ra-logo-text{
-    font-family: fantasy;
-    font-weight: bolder;
+    font-weight: 500;
     font-size: 16px;
     line-height: 24px;
 }
@@ -35,13 +34,14 @@
 }
 
 .artbox-title {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 54px;
+    font-weight: 600;
     margin-bottom: 1rem;
 }
 
 .artbox-description {
-    font-size: 1.125rem;
+    font-size: 16px;
+    line-height: 1.7rem;
     color: #4b5563;
     margin-bottom: 1.5rem;
 }
@@ -56,39 +56,43 @@
     display: inline-flex;
     align-items: center;
     padding: 0.75rem 1.5rem;
-    border-radius: 1.375rem;
+    border-radius: 100px;
     font-weight: 600;
     text-decoration: none;
     transition: background-color 0.3s;
+    font-size: 16px;
+    height: 52px;
 }
 
 .artbox-btn-primary {
-    background-color: white;
+    background: rgba(230, 233, 238, 1);
     color: #4b5563;
     border: 1px solid #d1d5db;
     transition: transform 0.3s ease;
 }
 
 
-.artbox-btn-primary:hover {
-    background-color: #9333ea;
-    color: white;
+.artbox-btn-primary:hover {  
     transform: translateY(-2px);
 }
+.artbox-btn-primary:hover {
+    background: linear-gradient(180deg, #802C90 0%, #BE7A4F 100%);
+    color: white;
+    transform: translateY(-2px);
+    }
 
 .artbox-btn-secondary {
-    background-color: white;
+    background: rgba(230, 233, 238, 1);
     color: #4b5563;
     border: 1px solid #d1d5db;
     transition: transform 0.3s ease;
-    
+   
 }
 
 .artbox-btn-secondary:hover {
-   
-        background-color: #9333ea;
-        color: white;
-        transform: translateY(-2px);
+    background: linear-gradient(180deg, #802C90 0%, #BE7A4F 100%);
+    color: white;
+    transform: translateY(-2px);
     }
 
 .artbox-btn svg {
@@ -118,4 +122,40 @@ img {
     .artbox-title {
         font-size: 2rem;
         }
+    /* .artbox-about-image{
+        margin-top: -10px;
+    } */
+    .artbox-about-content {
+        flex: 1 1 415px;
+    }
+   
 }
+@media (width:768px){
+    .artbox-about-image{
+        margin-top: -115px;
+    }
+}
+@media (max-width:480px){
+.artbox-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.artbox-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 100px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-size: 12px;
+    height: 47px;
+}
+.artbox-about-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4rem;
+}}

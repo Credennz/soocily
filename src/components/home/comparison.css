@@ -19,6 +19,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  height: 40px;
 }
 
 .comparison-badge span {

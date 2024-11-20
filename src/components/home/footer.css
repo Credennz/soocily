@@ -1,5 +1,4 @@
-
- footer {
+footer {
     background-color: #fff;
     padding: 0px;
     width: 100%;
@@ -15,7 +14,7 @@
    
 
 .tf-footer-links {
-    
+   
     flex-wrap: wrap;
     /* justify-content: space-between; */
     gap: 10px;
@@ -23,7 +22,7 @@
     }
 
     .tf-footer-links button {
-      
+     
             text-decoration: none;
             color: #555;
             font-size: 1em;
@@ -40,10 +39,24 @@
     .tf-footer-links button:hover {
     background-color: #e0e0e0;
     }
+    .tf-and-c{
+        display: flex
+;
+    font-size: 0.7em;
+    margin-right: 50px;
+    margin-bottom: 2px;
+    justify-content: center;
+    gap: 10px;
+
+    }
+    .tf-and-c a{
+        color: black;
+        text-decoration: none;
+    }
 .tf-x{
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    margin: 30px;
 }
 .p-ft{
     font-size: 17px;
@@ -52,11 +65,11 @@
 }
 
 .tf-social-icons{
-    
+   
         display: flex;
         gap: 10px;
    
-    
+   
 }
 @media (max-width: 1024px) {
     .container {
@@ -83,7 +96,7 @@
             transform: translateX(calc(-300px * 7));
         }
     }
-    
+   
     .tf-testimonials-button{
         align-items: 100%;
     }
@@ -133,9 +146,13 @@
     .tf-slide-track {
         width: calc(200px * 7);
     }
-    
 
-    
+    .tf-and-c{
+        margin-left: 50px;
+    }
+   
+
+   
     .tf-x{
         display: inline;
     }

@@ -2,14 +2,14 @@ import React from "react";
 
 export default function industry() {
   return (
-    <div>
-      <div id="features" class="ss">
+    <div id="in">
+      <div  class="ss">
         <div class="p1-container">
           <div class="left-column">
             <h1>Industries</h1>
             <p>Tailored solutions to fit your specific business needs.</p>
             <a href="#" class="book-call">
-              Book a Call <img src="../img/north_east.png" />
+              Book a Call <img class="aj"src="../img/north_east.png" />
             </a>
           </div>
           <div class="right-column">

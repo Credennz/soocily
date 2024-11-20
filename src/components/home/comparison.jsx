@@ -2,7 +2,7 @@ import React from "react";
 
 export default function comparison() {
   return (
-    <div id="works">
+    <div id="whyus">
       <div class="comparison-container">
         <div
           className="comparison-badge"
@@ -15,7 +15,7 @@ export default function comparison() {
             height="20"
             style={{ marginRight: "1px" }}
           />
-          <span>Comparison</span>
+          <span className="ra-logo-text" >Why Us</span>
         </div>
 
         <h1 class="title">Choosing Soocily Over Others</h1>

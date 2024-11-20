@@ -1,3 +1,4 @@
+
 import React from "react";
 
 export default function Service() {
@@ -6,10 +7,10 @@ export default function Service() {
       <div class="lcontainer">
         <div class="lservice">
           <div class="lservice_logo">
-            <img src="../img/service_logo.svg" alt="ServiceLogo" />
+            <img src="..\img\icon111.svg" alt="ServiceLogo" />
           </div>
           <div class="lservice_name">
-            <span>Services</span>
+            <span className="ra-logo-text">Services</span>
           </div>
         </div>
       </div>
@@ -145,13 +146,27 @@ export default function Service() {
             <div class="support-icons">
               <p>We support</p>
               <div class="support-icons2">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+                <div>
+                <span class="dot">
+                <img src="..\img\flipkart-icon.svg" className="sss" alt=""/>
+                </span>
+                </div>
+                <div>
+                <span class="dot">
+                <img src="..\img\Amazon_icon11.svg" className="ssx" alt=""/>
+                </span>
+                </div>
+                <div>
+                <span class="dot">
+                <img src="..\img\sophy11.svg"  className="sxx" alt=""/>
+                </span>
+                </div>
+                <button class="website-button">Own a website?</button>
               </div>
-              <button class="ecom-button">Lorem ipsum →</button>
+              <div className="conx">
+              <button class="ecom-button"><a href="https://wa.me/+918895244936" className="xtx" >Chat with experts <img src="..\img\vector.svg" alt="" style={{ width: "15px", height: "13px" ,top:"3px",left:"3px",position:"relative"}}
+              /> </a></button>            
+              </div>
             </div>
           </div>
         </div>
@@ -178,4 +193,4 @@ export default function Service() {
       </div>
     </div>
   );
-}
+}                 

@@ -59,7 +59,7 @@ export default function FAQ() {
           <header className="tf-faq-header">
             <div className="tf-faq-button">
               <img src="/img/ss2.png" alt="FAQ Logo" className="tf-faq-logo" />
-              <span>
+              <span className="ra-logo-text">
                 <h6>FAQ's</h6>
               </span>
             </div>

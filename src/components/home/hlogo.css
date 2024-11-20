@@ -13,6 +13,33 @@ hb-container {
     margin-bottom: 2rem;
     padding: 0 clamp(10px, 3vw, 30px);
   }
+
+  .horizontal-line {
+    position: absolute;
+    width: 90%; /* Responsive width */
+    max-width: 470px; /* Maximum width */
+    height: 1px;
+    background-color: #000; /* Line color */
+    top: 132px; /* Distance from the top */
+    left: 50%; /* Center alignment */
+    transform: translateX(-50%); /* Horizontal centering */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .horizontal-line {
+        top: 100px; /* Adjust vertical position */
+        width: 80%; /* Narrower width */
+    }
+}
+
+@media (max-width: 480px) {
+    .horizontal-line {
+        top: 80px; /* Further adjustment for small screens */
+        width: 70%; /* Further reduced width */
+    }
+}
+
    
   .htitle h3 {
 
@@ -92,7 +119,7 @@ hb-container {
   }
    
   .certification-logo {
-    width: min(350px, 90%);
+    width: min(409px, 90%);
     height: auto;
     max-width: 100%;
   }

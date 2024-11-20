@@ -35,7 +35,7 @@ const articles = [
 
 const Blogs = () => {
   return (
-    <div id="pricing" className="ra-container">
+    <div id="blogs" className="ra-container">
       <center>
         <div className="ra-blogs">
           <div className="ra-logox">
@@ -81,6 +81,11 @@ const HomePage = () => (
         </div>
       ))}
     </div>
+    <div>
+    <a href=""><botton class="floating-button" >view more &gt; &gt; </botton></a>
+   
+   
+  </div>
   </div>
 );
 

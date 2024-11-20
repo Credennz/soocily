@@ -21,14 +21,14 @@
 
 /* Modal Container */
 .modal-content {
-  background: linear-gradient(10deg, #e4dddc 0%, #f0c2b8 100%);
+  background: white;
   padding: 2rem;
   border-radius: 10px;
   width: 90%;
   max-width: 400px;
   max-height: 80vh;
   overflow-y: auto;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px rgb(89 29 29 / 76%);
   position: relative;
   text-align: center;
   animation: fadeIn 0.3s ease;
@@ -68,7 +68,7 @@
 
 .form-group label {
   font-size: 0.875rem;
-  color: #666;
+  color: #0d0d0d;
   text-align: left;
 }
 
@@ -149,7 +149,8 @@
   }
 
   .hb-main {
-    background: linear-gradient(180deg, #731C9E 30%, #C38049 100%);
+    background: linear-gradient(180deg, #73199B 0%, #D18B08 100%);
+
     height: 900px;
     color: white;
     line-height: 1.6;
@@ -170,6 +171,7 @@
 
   .hb-nav {
     display: flex;
+    /* height: 80px; */
     justify-content: space-between;
     align-items: center;
     background: #ffffff;
@@ -185,6 +187,27 @@
     z-index: 1;
   }
 
+  /* Apply transition only when .transition class is present */
+
+  /* .hb-nav-placeholder {
+   
+    transition: height 0.3s ease-in-out;
+  } */
+  .hb-nav.sticky + .hb-nav-placeholder {
+    height: 70px; 
+  }
+  
+.hb-nav.sticky {
+  transition: width 0.3s ease-in-out;
+  position: fixed;
+  top: 10px; /* Adjust based on your design */
+  left: 50%;
+  transform: translateX(-50%); /* Center the navbar horizontally */
+  width: 100%; /* Full width or adjust as necessary */
+  max-width: 1000px; /* Optional: Set a max width for the navbar */
+  z-index: 1000; /* Ensures it stays above other content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for visual separation */
+}
   .hb-logo img {
     height: 35px;
     width: auto;
@@ -440,7 +463,7 @@
   .hb-stat-card {
     background: linear-gradient(180deg, #e9dfdd 0%, #e1ccd5 100%);
     border-radius: 20px;
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
     transition: transform 0.3s ease;
     color: black;
     text-align: center;
@@ -481,6 +504,7 @@
   
 
   @media (max-width: 1100px) {
+    .hb-nav.sticky {width: 96%;}
     .hb-stats-container {
       max-width: 800px;
     }
@@ -560,6 +584,7 @@
 
   /* Updated media queries for better mobile responsiveness */
   @media (max-width: 768px) {
+    
     .hb-hero-section {
       padding: 4rem 1rem;
       top: -175px;
@@ -642,18 +667,22 @@
       position: relative;
       top: 37px;
   }
+  .hb-stat-card {
+   
+    padding: 1.5rem;
+  }
 
     .hb-top {
       display: none;
     }
     .hb-stats-container{
-      position: absolute;
+    position: absolute;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(169px, 1fr));
     gap: 1rem;
     margin-top: 1rem;
     padding: 1rem;
-    padding-top: 3rem;
+    padding-top: 2rem;
     border: 1px solid white;
     border-radius: 32px;
     background: rgba(255, 255, 255, 0.05);
@@ -939,7 +968,7 @@
     }
 
     .hb-nav {
-      width: 336px;
+      width: 385px;
       padding: 0.4rem 0.8rem;
       z-index: 2;
     }

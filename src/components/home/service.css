@@ -22,6 +22,7 @@
     gap: 10px;
     max-width: 136px;
     padding: 3px 10px;
+    height: 40px;
    
 }
 .features-list{
@@ -42,19 +43,29 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px #00000045;
     padding: 20px;
-    /* border-bottom: 2px solid #be7fc9; */
     flex-direction: column;
     justify-content: space-around;
+   
 }
-    /* border-bottom: 2px solid #be7fc9 */
-
-
-
+      .website-button {
+        height: 31px;
+        margin-top: 7px;
+        background: white;
+        border-radius: 5px;
+        padding: 0.4rem 0.7rem;
+        font-size: 0.8rem;
+        color: #333;
+        border: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+      /* .conx{
+        padding-left: 10px;
+   
+      } */
 .service-card h2{
     font-size: 19px;
     margin-bottom: 10px;
     font-family: 'Instrument Sans';
-    /* font-family: inherit; */
     font-family: Instrument Sans;
     font-size: 19px;
     font-weight: 500;
@@ -66,7 +77,6 @@
 .service-card p {
     font-size: 14px;
     color: #666;
-    /* margin: 24px; */
     margin-top: 20px;
     margin-bottom: 15px;
 
@@ -138,6 +148,24 @@
     margin-top: 4px;
     margin-bottom: 8px;
 }
+.sss{
+    height: 28px;
+    width: 32px;
+    padding-left: 7px;
+    padding-top: 10px;
+}
+.ssx{
+    height: 30px;
+    width: 34px;
+    padding-left: 6px;
+    padding-top: 12px;
+}
+.sxx{
+    height: 30px;
+    width: 34px;
+    padding-left: 6px;
+    padding-top: 9px;
+}
 .service-card .support-container .support-icons i {
     margin-right: 5px;
     color: #ccc;
@@ -162,7 +190,7 @@
 
 .ssv h1 {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 1px;
     font-size: 35px;
     margin-bottom: 40px;
     font-weight: bold;
@@ -181,10 +209,8 @@
         background-color: #fbf7f7;
         border-radius: 50%;
         display: inline-block;
-        /* border: 1px solid black; */
         box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.5);
     }
-
   .ht{
     padding-top: 50px;
   }
@@ -282,7 +308,7 @@
 .print-media {
     box-shadow: 2px solid #77229A;
 
-    
+   
 }
 .service-card:nth-child(7) {
    
@@ -300,7 +326,7 @@
     padding-top: 30px;
    
   }
-  
+ 
 .service-card:nth-child(5) {
     border-bottom:  2px solid #4d135ade; /* Different border color */
     box-shadow: 0 4px 10px#4d135ade; /* Different shadow */
@@ -312,7 +338,7 @@
     border-radius: 20px;
     background-color: #333;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
-    position: relative; 
+    position: relative;
     top: -134px;
     left: 10%;
     gap: 0px;
@@ -359,6 +385,10 @@
     text-align: center;
     margin-top: 10px;
     margin-bottom: 20px;
+}
+.xtx{
+    color: white;
+    text-decoration: none;
 }
 .xt{
     display: flex;
@@ -410,7 +440,7 @@
         border-radius: 20px;
         background-color: #333;
         box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
-        position: relative; 
+        position: relative;
         top: -134px;
         left: 27%;
         gap: 0px;
@@ -425,7 +455,7 @@
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: space-between;
-    
+   
     }
     .ssv h1 {
         text-align: center;
@@ -434,7 +464,7 @@
         font-weight: bold;
         padding: 10px;
     }
-    
+   
 }
 
 

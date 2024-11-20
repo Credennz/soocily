@@ -31,7 +31,6 @@ export default function LogoCarousel() {
 
       <div className="logos-wrapper">
         <div className="client-logos">
-          {/* Triple duplication of logos for smooth scrolling */}
           {logos.concat(logos, logos).map((logo, index) => (
             <img
               key={index}
@@ -43,7 +42,10 @@ export default function LogoCarousel() {
         </div>
       </div>
 
+      {/* Certification Section */}
       <div className="certification-section">
+        {/* Horizontal Line */}
+        {/* <div className="horizontal-line"></div> */}
         <h4 className="certification-title">Our services are certified by</h4>
         <div className="certification-logos">
           <img

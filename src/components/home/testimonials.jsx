@@ -12,7 +12,7 @@ export default function testimonials() {
               alt="Testimonials Logo"
               class="tf-testimonial-logo"
             />
-            <span>
+            <span className="ra-logo-text">
               <h6 />
               Testimonials
             </span>

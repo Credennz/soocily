@@ -91,12 +91,12 @@
 }
 
 .ra-read-more-btn {
-    background-color: transparent;
+    background-color: black;
     border: 1px solid #333;
-    color: #333;
+    color:white;
     width: 2rem;
     height: 2rem;
-    border-radius: 50%;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,6 +151,23 @@
     color: #666;
     margin-bottom: 1rem;
 }
+.floating-button{
+    padding: 15px 25px;
+    background: linear-gradient(90deg, #731c9e 0%, #c38049 100%);
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    float: right;
+    margin-top: 46px;
+    color: white;
+}
+.floating-button:hover{
+    background-color: blue;
+    transform: translateY(-2px);
+}
+
 
 @media (max-width: 768px) {
     .ra-title {
@@ -191,7 +208,7 @@
     justify-content: center;
     align-items: center;
   }
-  
+ 
   .modal-content {
     background: #fff;
     padding: 2rem;
@@ -200,12 +217,12 @@
     width: 90%;
     position: relative;
   }
-  
+ 
   .modal-title {
     font-size: 1.5rem;
     margin-bottom: 1rem;
   }
-  
+ 
   .modal-back-btn {
     margin-top: 1.5rem;
     background-color: #333;
@@ -215,8 +232,8 @@
     cursor: pointer;
     border-radius: 4px;
   }
-  
+ 
   .modal-back-btn:hover {
     background-color: #555;
   }
-  
+ 

@@ -1,5 +1,5 @@
 // App.js or Header.js
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import emailjs from "emailjs-com";
 import ThankYouModal from "./thankYouModal";
 
@@ -52,6 +52,48 @@ export default function Header({ openContactModal }) {
     setIsModalOpen(false);
   };
 
+  const [isSticky, setIsSticky] = useState(false);
+  const navRef = useRef(null); // Reference to the nav element
+  const placeholderRef = useRef(null); // Reference to the placeholder element
+
+// Sticky navigation and dynamic placeholder height logic
+const [isTransitioning, setIsTransitioning] = useState(false);  
+useEffect(() => {
+  let lastScrollTop = 0; // To track scroll direction
+  const handleScroll = () => {
+    if (!navRef.current || !placeholderRef.current) return;
+
+    const navHeight = navRef.current.offsetHeight;
+    const scrollY = window.scrollY;
+
+    // Check the direction of the scroll
+    const isScrollingDown = scrollY > lastScrollTop;
+    lastScrollTop = scrollY;
+
+    if (isScrollingDown && scrollY > navHeight + 10 && !isSticky) {
+      setIsSticky(true);
+      placeholderRef.current.style.height = `${navHeight + 35}px`; // Smooth height change
+    } else if (!isScrollingDown && scrollY <= navHeight - 10 && isSticky) {
+      setIsSticky(false);
+      placeholderRef.current.style.height = "0px"; // Reset placeholder height
+    }
+  };
+
+  const debouncedHandleScroll = () => {
+    clearTimeout(handleScroll.debounceTimer);
+    handleScroll.debounceTimer = setTimeout(() => handleScroll(), 10); // Debounce 20ms
+  };
+
+  window.addEventListener("scroll", debouncedHandleScroll);
+
+  return () => {
+    window.removeEventListener("scroll", debouncedHandleScroll); // Cleanup
+    clearTimeout(handleScroll.debounceTimer);
+  };
+}, [isSticky]);
+
+
+
   return (
     <div>
       <div className="hb-main">
@@ -60,7 +102,16 @@ export default function Header({ openContactModal }) {
             <img src="img/top.png" alt="net" />
           </div>
           <div className="hb-part1">
-            <nav className="hb-nav">
+            {/* Sticky Placeholder */}
+            <div
+              ref={placeholderRef}
+              className={`hb-nav-placeholder ${isTransitioning ? "transition" : ""}`}
+            ></div>
+            <nav
+              className={`hb-nav ${isSticky ? "sticky" : ""}`}
+              ref={navRef}
+            >
+
               <div className="hb-logo">
                 <img src="img/logosocily.png" alt="Soocily" />
               </div>
@@ -72,11 +123,11 @@ export default function Header({ openContactModal }) {
               </div>
 
               <div className={`hb-nav-links ${menuActive ? "active" : ""}`}>
-                <a href="#features">Features</a>
                 <a href="#services">Services</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#about">About</a>
-                <a href="#works">Works</a>
+                <a href="#about">About Us</a>
+                <a href="#in">Industries</a>
+                <a href="#whyus">Why us</a>
+                <a href="#blogs">Blogs</a>
                 <a
                   href="#contact"
                   onClick={(e) => {

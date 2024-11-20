@@ -35,10 +35,11 @@ export default function footer() {
             <b />
             Contact
           </button>
-          <button>
-            <b />
-            Privacy Policy
-          </button>
+        </div>
+        <div class="tf-and-c">
+         <a href="#">Terms and conditions</a>
+         <a href="#">Privacy Policy</a>
+         <a href="#">costomer Policy</a>
         </div>
         <hr />
         <div class="tf-x">

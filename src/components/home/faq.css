@@ -23,7 +23,8 @@
 
 .tf-faq-item button {
     width: 100%;
-    background-color: #f4f7ff;
+    background-color:#0f0f0f12;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,12 +91,16 @@
     gap: 5px;
     justify-content: center;
     padding: 3px 10px;
+    height: 40px;
 }
 .tf-faq-button img {
-    height: 15px;
+    height: 26px;
     object-fit: contain;
-    width: 15px;
+    width: 26px;
 }
+
+
+
 @media (max-width: 768px) {
     .tf-faq h2 {
         font-size: 1.4em; /* Adjusted font size for smaller screens */

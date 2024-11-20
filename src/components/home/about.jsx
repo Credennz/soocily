@@ -9,7 +9,7 @@ export default function about({ openContactModal }) {
             <div className="ra-blogs">
               <div className="ra-logox">
                 <img
-                  src="../img/aboutus_logo.svg"
+                  src="../img/logous.svg"
                   alt="aboutsS Logo"
                   className="ra-blogs-logo"
                 />
@@ -23,7 +23,7 @@ export default function about({ openContactModal }) {
             <p class="artbox-description">
               Discover who we are and our mission at Artbox. We are a passionate
               team of creative professionals dedicated to crafting exceptional
-              web design solutions. Our mission is to empower businesses with
+              web design solutions. <br />Our mission is to empower businesses with
               innovative websites that not only captivate but also drive
               results.
             </p>
@@ -36,10 +36,10 @@ export default function about({ openContactModal }) {
                 }}
                 class="artbox-btn artbox-btn-primary"
               >
-                Start a Project
+                View Case Studies
               </a>
-              <a href="#" class="artbox-btn artbox-btn-secondary">
-                Book a Call
+              <a href="https://wa.me/8895244936" class="artbox-btn artbox-btn-secondary">
+                Whatsapp us
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
