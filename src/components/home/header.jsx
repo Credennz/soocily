@@ -92,8 +92,40 @@ useEffect(() => {
   };
 }, [isSticky]);
 
+//nav bar off
+const menuRef = useRef(null);
+useEffect(() => {
+  // Listen for clicks outside the menu
+  document.addEventListener("mousedown", closeMenuIfClickedOutside);
 
+  // Clean up the event listener when the component unmounts
+  return () => {
+    document.removeEventListener("mousedown", closeMenuIfClickedOutside);
+  };
+}, []);
+const closeMenuIfClickedOutside = (e) => {
+  if (menuRef.current && !menuRef.current.contains(e.target)) {
+    setMenuActive(false); // Close the menu
+  }
+};
 
+const handleLinkClick = () => {
+  setMenuActive(false); // Close the menu when a link is clicked
+};document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault(); // Stop the default jump behavior
+
+    const targetId = this.getAttribute('href').slice(1); // Get the target section ID
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop - 150, // Scroll to the target minus 300px offset
+        behavior: 'smooth' // Smooth scrolling
+      });
+    }
+  });
+});
   return (
     <div>
       <div className="hb-main">
@@ -122,24 +154,24 @@ useEffect(() => {
                 <span></span>
               </div>
 
-              <div className={`hb-nav-links ${menuActive ? "active" : ""}`}>
-                <a href="#services">Services</a>
-                <a href="#about">About Us</a>
-                <a href="#in">Industries</a>
-                <a href="#whyus">Why us</a>
-                <a href="#blogs">Blogs</a>
-                <a
-                  href="#contact"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    openContactModal();
-                  }}
-                  style={{ color: "white" }}
-                  className="hb-contact-btn"
-                >
-                  Contact
-                </a>
-              </div>
+              <div className={`hb-nav-links ${menuActive ? "active" : ""}`}ref={menuRef}>
+    <a href="#services"class="nav-link"  onClick={handleLinkClick}>Services</a>
+    <a href="#about" class="nav-link" onClick={handleLinkClick}>About Us</a>
+    <a href="#in" class="nav-link"  onClick={handleLinkClick}>Industries</a>
+    <a href="#whyus" class="nav-link" onClick={handleLinkClick}>Why us</a>
+    <a href="#blogs" class="nav-link" onClick={handleLinkClick}>Blogs</a>
+    <a
+      href="#contact"
+      onClick={(e) => {
+        e.preventDefault();
+        openContactModal();
+      }}
+      style={{ color: "white" }}
+      className="hb-contact-btn"
+    >
+      Contact
+    </a>
+  </div>
             </nav>
             <div className="net">
               <img src="../img/since.svg" alt="img" />
