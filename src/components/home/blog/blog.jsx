@@ -248,7 +248,7 @@ useEffect(() => {
               <div className="blog-card" key={blog.id}>
                 <span className="blog-date">{blog.date}</span>
                 <h3 className="blog-title">{blog.title}</h3>
-                <p className="blog-content">{blog.content}</p>
+                <p className="blog-content1">{blog.content}</p>
                 <div className="blog-meta">
                   <div className="tk">
                     <span className="blog-author">Uploaded by </span>
