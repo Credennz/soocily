@@ -14,6 +14,13 @@ import LogoCarousel from "./components/home/hlogo";
 import ContactModal from "./components/home/contactoverlay";
 import Blog from "./components/home/blog/blog";
 import BlogPost from "./components/home/blog/cblog";
+import Tc from "./components/policy/tc";
+import "./components/home/faq.css";
+
+import "./components/policy/tc.css";
+
+
+// import CaseStudies from "./components/home/casestudy";
 import "./components/home/footer.css";
 import "./components/home/faq.css";
 import "./components/home/blogs.css";
@@ -24,6 +31,7 @@ import "./components/home/about.css";
 import "./components/home/service.css";
 import "./components/home/header.css";
 import "./components/home/hlogo.css";
+// import "./components/home/casestudy.css";
 
 function App() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
@@ -34,21 +42,7 @@ function App() {
   // Close Contact Modal
   const closeContactModal = () => setIsContactModalOpen(false);
 
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault(); // Stop the default jump behavior
   
-      const targetId = this.getAttribute('href').slice(1); // Get the target section ID
-      const targetElement = document.getElementById(targetId);
-  
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop - 300, // Scroll to the target minus 300px offset
-          behavior: 'smooth' // Smooth scrolling
-        });
-      }
-    });
-  });
 
   return (
     <div className="App">
@@ -65,6 +59,7 @@ function App() {
                 <About openContactModal={openContactModal} />
                 <Industry />
                 <Comparison />
+            
                 <Testimonials />
                 <Blogs />
                 <Faq />
@@ -74,6 +69,7 @@ function App() {
           />
           {/* Blog Pages */}
           <Route path="/blog" element={<Blog />} />
+          <Route path="/tc" element={<Tc />} />
           <Route path="/post/:id" element={<BlogPost />} />
         </Routes>
         {/* Contact Modal */}

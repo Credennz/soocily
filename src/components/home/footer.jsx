@@ -1,50 +1,33 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export default function footer() {
+
+export default function Footer() {
   return (
     <div>
       <footer>
-        <img class="tf-logo" src="/img/logo.png" alt="Soochr Logo" />
-        <p class="p-ft">
+        <img className="tf-logo" src="/img/logo.png" alt="Soochr Logo" />
+        <p className="p-ft">
           Experienced team delivering exceptional digital <br />
           solutions tailored to your brand.
         </p>
-        <div class="tf-footer-links">
-          <button>
-            <b />
-            About
-          </button>
-          <button>
-            <b />
-            Services
-          </button>
-          <button>
-            <b />
-            Why Us
-          </button>
-          <button>
-            <b />
-            Pricing
-          </button>
-          <button>
-            <b />
-            Works
-          </button>
-
-          <button>
-            <b />
-            Contact
-          </button>
+        <div className="tf-footer-links">
+          <button>About</button>
+          <button>Services</button>
+          <button>Why Us</button>
+          <button>Pricing</button>
+          <button>Works</button>
+          <button>Contact</button>
         </div>
-        <div class="tf-and-c">
-         <a href="#">Terms and conditions</a>
-         <a href="#">Privacy Policy</a>
-         <a href="#">costomer Policy</a>
+        <div className="tf-and-c">
+          <Link to="/tc">Terms and Conditions</Link>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Customer Policy</a>
         </div>
         <hr />
-        <div class="tf-x">
-          <div class="tf-attribution">Developed by credennz.com</div>
-          <div class="tf-social-icons">
+        <div className="tf-x">
+          <div className="tf-attribution">Developed by credennz.com</div>
+          <div className="tf-social-icons">
             <a href="#">
               <img src="/img/Linkedin_logo.svg" alt="LinkedIn" />
             </a>
@@ -55,8 +38,7 @@ export default function footer() {
               <img src="/img/insta_logo.svg" alt="Instagram" />
             </a>
           </div>
-
-          <div class="tf-attribution">
+          <div className="tf-attribution">
             &copy;2024 Soocily. All Rights Reserved.
           </div>
         </div>

@@ -8,8 +8,20 @@ export default function industry() {
           <div class="left-column">
             <h1>Industries</h1>
             <p>Tailored solutions to fit your specific business needs.</p>
-            <a href="#" class="book-call">
-              Book a Call <img class="aj"src="../img/north_east.png" />
+            <a href="#"  class="book-call">
+              Book a Call <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
             </a>
           </div>
           <div class="right-column">

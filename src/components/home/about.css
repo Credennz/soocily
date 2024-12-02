@@ -65,10 +65,14 @@
 }
 
 .artbox-btn-primary {
-    background: rgba(230, 233, 238, 1);
+    background: linear-gradient(180deg, #802C90 0%, #BE7A4F 100%);
+    color: white;
+    transition: transform 0.3s ease; 
+
+    /* background: rgba(230, 233, 238, 1);
     color: #4b5563;
     border: 1px solid #d1d5db;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; */
 }
 
 
