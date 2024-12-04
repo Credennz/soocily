@@ -47,7 +47,7 @@ const blogData = [
     id: 6,
     title: "The Ultimate Guide to Shoppable Ads:",
     date: "Dec 03, 2024",
-    content: "In today’s fast-paced digital world, capturing a consumer’s attention and converting it into a sale often feels like threading a needle. Enter shoppable ads a revolutionary tool that bridges the gap between discovery and purchase.",
+    content: "In today’s fast-paced digital world, capturing a consumer’s attention and converting it into a sale often feels like threading a needle. ",
     author: "Soocily",
     image: "path/to/image1.jpg",
   },
