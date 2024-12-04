@@ -35,7 +35,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    margin-top: 267px;
+    margin-top: 15px;
     border-radius: 10px;
     background-color: #161717;
     background: linear-gradient(72deg, #1b1a1a, #454040);
@@ -50,7 +50,7 @@
     padding: 40px;
     margin-bottom: 50px;
     overflow: hidden;
-    min-height: 450px;
+    /* min-height: 450px; */
     z-index: 1;
     background-size: cover;
     background-position: center;

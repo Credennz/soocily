@@ -77,7 +77,7 @@ export default function FAQ() {
                 <b>{faq.question}</b>
               </p>
               <div className="tf-plus-icon">
-                {activeIndex === index ? "-" : "+"}
+                {activeIndex === index ? "+" : "+"}
               </div>
             </button>
             {activeIndex === index && (

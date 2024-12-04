@@ -131,7 +131,7 @@ export default function Service() {
             </p>
           </div>
           <div class="editor-interface">
-            <img src="../img/uiuxbt.png" alt="" />
+            <img src="../img/need_a_website.svg" alt="" />
           </div>
         </div>
         <div class="service-card">

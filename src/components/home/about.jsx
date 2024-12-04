@@ -38,7 +38,7 @@ export default function about({ openContactModal }) {
               >
                 View Case Studies
               </a>
-              <a href="https://wa.me/8895244936" class="artbox-btn artbox-btn-secondary">
+              <a href="https://wa.me/+918895244936" class="artbox-btn artbox-btn-secondary">
                 Whatsapp us
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

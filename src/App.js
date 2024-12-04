@@ -18,7 +18,10 @@ import Tc from "./components/policy/tc";
 import "./components/home/faq.css";
 
 import "./components/policy/tc.css";
-
+import PrivacyPolicy from "./components/policy/pp";
+import "./components/policy/pp.css";
+import CustomerPolicy from "./components/policy/cp";
+import "./components/policy/cp.css";
 
 // import CaseStudies from "./components/home/casestudy";
 import "./components/home/footer.css";
@@ -70,6 +73,8 @@ function App() {
           {/* Blog Pages */}
           <Route path="/blog" element={<Blog />} />
           <Route path="/tc" element={<Tc />} />
+          <Route path="/pp" element={<PrivacyPolicy />} />
+          <Route path="/cp" element={<CustomerPolicy />} />
           <Route path="/post/:id" element={<BlogPost />} />
         </Routes>
         {/* Contact Modal */}

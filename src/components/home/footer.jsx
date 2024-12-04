@@ -21,8 +21,8 @@ export default function Footer() {
         </div>
         <div className="tf-and-c">
           <Link to="/tc">Terms and Conditions</Link>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Customer Policy</a>
+          <a href="/pp">Privacy Policy</a>
+          <a href="/cp">Customer Policy</a>
         </div>
         <hr />
         <div className="tf-x">
