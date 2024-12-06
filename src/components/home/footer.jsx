@@ -31,10 +31,10 @@ export default function Footer() {
             <a href="#">
               <img src="/img/Linkedin_logo.svg" alt="LinkedIn" />
             </a>
-            <a href="#">
+            <a href="https://x.com/soocily21526">
               <img src="/img/twitter_logo.svg" alt="Twitter" />
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/soocily_ind/">
               <img src="/img/insta_logo.svg" alt="Instagram" />
             </a>
           </div>

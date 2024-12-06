@@ -8,6 +8,7 @@ const BlogPost = ({ openContactModal }) => {
   const { id } = useParams(); // Fetch the blog ID dynamically from the URL
   const navigate = useNavigate(); // Always declare hooks at the top level
   const [menuActive, setMenuActive] = useState(false); // Manage menu toggle state
+  const toggleButtonRef = useRef(null);
 
   const blogData = [
     {
@@ -319,8 +320,14 @@ useEffect(() => {
     document.removeEventListener("mousedown", closeMenuIfClickedOutside);
   };
 }, []);
+
 const closeMenuIfClickedOutside = (e) => {
-  if (menuRef.current && !menuRef.current.contains(e.target)) {
+  if (
+    menuRef.current &&
+    !menuRef.current.contains(e.target) &&
+    toggleButtonRef.current !== e.target &&
+    !toggleButtonRef.current.contains(e.target)
+  ) {
     setMenuActive(false); // Close the menu
   }
 };
@@ -346,8 +353,9 @@ const handleLinkClick = () => {
     });
   };
 
-  const toggleMenu = () => {
-    setMenuActive(!menuActive);
+  const toggleMenu = (e) => {
+    e.stopPropagation(); // Prevent triggering outside click logic
+    setMenuActive((prevState) => !prevState);
   };
 
   const goBack = () => {
@@ -371,7 +379,7 @@ const handleLinkClick = () => {
         <div className="hb-logo">
           <img src="../img/logosocily.png" alt="Soocily" />
         </div>
-        <div className="menu-toggle" onClick={toggleMenu}>
+        <div className="menu-toggle" ref={toggleButtonRef} onClick={toggleMenu}>
           <span></span>
           <span></span>
           <span></span>

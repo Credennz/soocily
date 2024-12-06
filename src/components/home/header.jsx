@@ -1,34 +1,78 @@
-// App.js or Header.js
 import React, { useState, useEffect, useRef } from "react";
 import emailjs from "emailjs-com";
 import ThankYouModal from "./thankYouModal";
-
+ 
 export default function Header({ openContactModal }) {
   const [menuActive, setMenuActive] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuActive(!menuActive);
+  const [isSticky, setIsSticky] = useState(false);
+  const navRef = useRef(null);
+  const placeholderRef = useRef(null);
+  const menuRef = useRef(null);
+  const toggleButtonRef = useRef(null);
+ 
+  const toggleMenu = (e) => {
+    e.stopPropagation(); // Prevent triggering outside click logic
+    setMenuActive((prevState) => !prevState); // Toggle menu state
   };
-
-  const openForm = () => {
-    setIsFormOpen(true);
+ 
+  const closeMenuIfClickedOutside = (e) => {
+    if (
+      menuRef.current &&
+      !menuRef.current.contains(e.target) &&
+      toggleButtonRef.current !== e.target &&
+      !toggleButtonRef.current.contains(e.target)
+    ) {
+      setMenuActive(false); // Close the menu
+    }
   };
-
-  const closeForm = () => {
-    setIsFormOpen(false);
-  };
-
+ 
+  useEffect(() => {
+    document.addEventListener("mousedown", closeMenuIfClickedOutside);
+    return () => {
+      document.removeEventListener("mousedown", closeMenuIfClickedOutside);
+    };
+  }, []);
+ 
+  useEffect(() => {
+    let lastScrollTop = 0;
+    const handleScroll = () => {
+      if (!navRef.current || !placeholderRef.current) return;
+ 
+      const navHeight = navRef.current.offsetHeight;
+      const scrollY = window.scrollY;
+      const isScrollingDown = scrollY > lastScrollTop;
+      lastScrollTop = scrollY;
+ 
+      if (isScrollingDown && scrollY > navHeight + 10 && !isSticky) {
+        setIsSticky(true);
+        placeholderRef.current.style.height = `${navHeight + 35}px`;
+      } else if (!isScrollingDown && scrollY <= navHeight - 10 && isSticky) {
+        setIsSticky(false);
+        placeholderRef.current.style.height = "0px";
+      }
+    };
+ 
+    const debouncedHandleScroll = () => {
+      clearTimeout(handleScroll.debounceTimer);
+      handleScroll.debounceTimer = setTimeout(() => handleScroll(), 10);
+    };
+ 
+    window.addEventListener("scroll", debouncedHandleScroll);
+    return () => {
+      window.removeEventListener("scroll", debouncedHandleScroll);
+      clearTimeout(handleScroll.debounceTimer);
+    };
+  }, [isSticky]);
+ 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-
-    // Get form data
+ 
     const formData = new FormData(e.target);
     const formValues = Object.fromEntries(formData.entries());
     console.log("Form submitted with values:", formValues);
-
-    // Send email via EmailJS
+ 
     emailjs
       .sendForm(
         "service_6z9pba8",
@@ -39,144 +83,109 @@ export default function Header({ openContactModal }) {
       .then(
         (result) => {
           console.log("Email sent successfully:", result.text);
-          closeForm();
-          setIsModalOpen(true); // Show the thank-you modal
+          setIsFormOpen(false);
+          setIsModalOpen(true);
         },
         (error) => {
           console.error("Error sending email:", error.text);
         }
       );
   };
-
+ 
+  const handleLinkClick = () => {
+    setMenuActive(false); // Close the menu when a link is clicked
+  };
+ 
   const closeModal = () => {
     setIsModalOpen(false);
   };
-
-  const [isSticky, setIsSticky] = useState(false);
-  const navRef = useRef(null); // Reference to the nav element
-  const placeholderRef = useRef(null); // Reference to the placeholder element
-
-// Sticky navigation and dynamic placeholder height logic
-const [isTransitioning, setIsTransitioning] = useState(false);  
-useEffect(() => {
-  let lastScrollTop = 0; // To track scroll direction
-  const handleScroll = () => {
-    if (!navRef.current || !placeholderRef.current) return;
-
-    const navHeight = navRef.current.offsetHeight;
-    const scrollY = window.scrollY;
-
-    // Check the direction of the scroll
-    const isScrollingDown = scrollY > lastScrollTop;
-    lastScrollTop = scrollY;
-
-    if (isScrollingDown && scrollY > navHeight + 10 && !isSticky) {
-      setIsSticky(true);
-      placeholderRef.current.style.height = `${navHeight + 35}px`; // Smooth height change
-    } else if (!isScrollingDown && scrollY <= navHeight - 10 && isSticky) {
-      setIsSticky(false);
-      placeholderRef.current.style.height = "0px"; // Reset placeholder height
-    }
-  };
-
-  const debouncedHandleScroll = () => {
-    clearTimeout(handleScroll.debounceTimer);
-    handleScroll.debounceTimer = setTimeout(() => handleScroll(), 10); // Debounce 20ms
-  };
-
-  window.addEventListener("scroll", debouncedHandleScroll);
-
-  return () => {
-    window.removeEventListener("scroll", debouncedHandleScroll); // Cleanup
-    clearTimeout(handleScroll.debounceTimer);
-  };
-}, [isSticky]);
-
-//nav bar off
-const menuRef = useRef(null);
-useEffect(() => {
-  // Listen for clicks outside the menu
-  document.addEventListener("mousedown", closeMenuIfClickedOutside);
-
-  // Clean up the event listener when the component unmounts
-  return () => {
-    document.removeEventListener("mousedown", closeMenuIfClickedOutside);
-  };
-}, []);
-const closeMenuIfClickedOutside = (e) => {
-  if (menuRef.current && !menuRef.current.contains(e.target)) {
-    setMenuActive(false); // Close the menu
-  }
-};
-
-const handleLinkClick = () => {
-  setMenuActive(false); // Close the menu when a link is clicked
-};document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault(); // Stop the default jump behavior
-
-    const targetId = this.getAttribute('href').slice(1); // Get the target section ID
-    const targetElement = document.getElementById(targetId);
-
-    if (targetElement) {
-      window.scrollTo({
-        top: targetElement.offsetTop - 150, // Scroll to the target minus 300px offset
-        behavior: 'smooth' // Smooth scrolling
-      });
-    }
-  });
-});
+ 
+  const openForm = () => setIsFormOpen(true);
+  const closeForm = () => setIsFormOpen(false);
+ 
   return (
     <div>
       <div className="hb-main">
         <div className="hb-hero-section">
-          <div className="hb-top" alt="img">
+          <div className="hb-top">
             <img src="img/top.png" alt="net" />
           </div>
           <div className="hb-part1">
             {/* Sticky Placeholder */}
             <div
               ref={placeholderRef}
-              className={`hb-nav-placeholder ${isTransitioning ? "transition" : ""}`}
+              className={`hb-nav-placeholder`}
             ></div>
             <nav
               className={`hb-nav ${isSticky ? "sticky" : ""}`}
               ref={navRef}
             >
-
               <div className="hb-logo">
                 <img src="img/logosocily.png" alt="Soocily" />
               </div>
-
-              <div className="menu-toggle" onClick={toggleMenu}>
+ 
+              <div
+                className="menu-toggle"
+                ref={toggleButtonRef}
+                onClick={toggleMenu}
+              >
                 <span></span>
                 <span></span>
                 <span></span>
               </div>
-
-              <div className={`hb-nav-links ${menuActive ? "active" : ""}`}ref={menuRef}>
-    <a href="#services"class="nav-link"  onClick={handleLinkClick}>Services</a>
-    <a href="#about" class="nav-link" onClick={handleLinkClick}>About Us</a>
-    <a href="#in" class="nav-link"  onClick={handleLinkClick}>Industries</a>
-    <a href="#whyus" class="nav-link" onClick={handleLinkClick}>Why us</a>
-    <a href="#blogs" class="nav-link" onClick={handleLinkClick}>Blogs</a>
-    <a
-      href="#contact"
-      onClick={(e) => {
-        e.preventDefault();
-        openContactModal();
-      }}
-      style={{ color: "white" }}
-      className="hb-contact-btn"
-    >
-      Contact
-    </a>
-  </div>
+ 
+              <div
+                className={`hb-nav-links ${menuActive ? "active" : ""}`}
+                ref={menuRef}
+              >
+                <a
+                  href="#services"
+                  className="nav-link"
+                  onClick={handleLinkClick}
+                >
+                  Services
+                </a>
+                <a
+                  href="#about"
+                  className="nav-link"
+                  onClick={handleLinkClick}
+                >
+                  About Us
+                </a>
+                <a href="#in" className="nav-link" onClick={handleLinkClick}>
+                  Industries
+                </a>
+                <a
+                  href="#whyus"
+                  className="nav-link"
+                  onClick={handleLinkClick}
+                >
+                  Why us
+                </a>
+                <a
+                  href="#blogs"
+                  className="nav-link"
+                  onClick={handleLinkClick}
+                >
+                  Blogs
+                </a>
+                <a
+                  href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    openContactModal();
+                  }}
+                  style={{ color: "white" }}
+                  className="hb-contact-btn"
+                >
+                  Contact
+                </a>
+              </div>
             </nav>
             <div className="net">
               <img src="../img/since.svg" alt="img" />
             </div>
-
+ 
             <h1 className="hb-title">
               Optimize Your Marketing
               <br />
@@ -188,7 +197,7 @@ const handleLinkClick = () => {
               . in Ad Spend
             </p>
           </div>
-
+ 
           {/* Form Modal */}
           {isFormOpen && (
             <div className="modal-overlay">
@@ -250,21 +259,21 @@ const handleLinkClick = () => {
               </div>
             </div>
           )}
-
+ 
           {/* Thank You Modal */}
           <ThankYouModal isOpen={isModalOpen} onClose={closeModal} />
-
+ 
           <div className="hb-part2">
             <div className="hb-net">
               <img src="img/net.png" alt="net" />
             </div>
-            <div className="hb-atlft" alt="img">
+            <div className="hb-atlft">
               <img src="img/atlft.png" alt="net" />
             </div>
-            <div className="hb-atright" alt="img">
+            <div className="hb-atright">
               <img src="img/atright.png" alt="net" />
             </div>
-
+ 
             <div className="hb-actions">
               <a href="#" onClick={openForm} className="hb-cta-button">
                 Request Call Back
@@ -292,7 +301,7 @@ const handleLinkClick = () => {
                 </div>
               </div>
             </div>
-
+ 
             <div className="hb-stats-container">
               <div className="hb-stat-card">
                 <div className="hb-stat-number">3X</div>

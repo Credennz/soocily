@@ -8,6 +8,7 @@ const Blog = ({ openContactModal }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [menuActive, setMenuActive] = useState(false);
   const blogsPerPage = 8;
+  const toggleButtonRef = useRef(null);
 
   // Blog data
   const blogData = [
@@ -17,7 +18,7 @@ const Blog = ({ openContactModal }) => {
       date: "Apr 12, 2024",
       content: "Learn the fundamentals of web design and development. Start your journey today.",
       author: "Soocily",
-      image: "path/to/image1.jpg",
+      image: "path/to/image1.png",
     },
     {
       id: 2,
@@ -57,7 +58,7 @@ const Blog = ({ openContactModal }) => {
       date: "Dec 03, 2024",
       content: "In today’s fast-paced digital world, capturing a consumer’s attention and converting it into a sale often feels like threading a needle. ",
       author: "Soocily",
-      image: "path/to/image1.jpg",
+      image: "https://s3-us-west-2.amazonaws.com/speedybrandimages/tmp_6b7a260e-a717-4625-b845-a7f8ee929ee3.webp",
     },
     {
       id: 7,
@@ -106,7 +107,12 @@ useEffect(() => {
   };
 }, []);
 const closeMenuIfClickedOutside = (e) => {
-  if (menuRef.current && !menuRef.current.contains(e.target)) {
+  if (
+    menuRef.current &&
+    !menuRef.current.contains(e.target) &&
+    toggleButtonRef.current !== e.target &&
+    !toggleButtonRef.current.contains(e.target)
+  ) {
     setMenuActive(false); // Close the menu
   }
 };
@@ -180,6 +186,20 @@ useEffect(() => {
       behavior: "smooth",
     });
   };
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target) && !event.target.closest('.menu-toggle')) {
+        setMenuActive(false);
+      }
+    };
+  
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+  
+  
   
   return (
     <div>
@@ -188,12 +208,13 @@ useEffect(() => {
         <div className="hb-logo">
           <img src="img/logosocily.png" alt="Soocily" />
         </div>
-        <div className="menu-toggle" onClick={toggleMenu}>
+        <div className="menu-toggle" ref={toggleButtonRef} onClick={toggleMenu}>
           <span></span>
           <span></span>
           <span></span>
         </div>
         <div className={`hb-nav-links ${menuActive ? "active" : ""}`}ref={menuRef}>
+        
   {/* Link to Home and Services section */}
   <HashLink to="/#services" class="nav-link"  scroll={scrollWithOffset}onClick={handleLinkClick}>Services</HashLink>
 
@@ -228,7 +249,7 @@ useEffect(() => {
               <p>{featuredBlog.content}</p>
             </div>
             <button
-              className="read-more"
+              className="blog-read-more"
               onClick={() => handleNavigation(featuredBlog.id)}
             >
               Read the blog..
@@ -310,7 +331,7 @@ useEffect(() => {
 
       <div className="banner">
         <img
-          src="https://digitalmediasoft.com/wp-content/uploads/2020/03/digital-marketing-banner.jpg"
+          src="https://sistemaggedeensino.com.br/portal/wp-content/uploads/2020/02/marketing-digital-banner-post.png"
           alt="Banner Image"
         />
       </div>

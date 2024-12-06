@@ -6,12 +6,18 @@ import "./tc.css";
 const Tc = ({ openContactModal }) => {
   const [menuActive, setMenuActive] = useState(false); // Manage menu toggle state
   const menuRef = useRef(null); // Reference for detecting outside clicks
+  const toggleButtonRef = useRef(null);
 
   // Close menu if clicked outside
   useEffect(() => {
     const closeMenuIfClickedOutside = (e) => {
-      if (menuRef.current && !menuRef.current.contains(e.target)) {
-        setMenuActive(false);
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(e.target) &&
+        toggleButtonRef.current !== e.target &&
+        !toggleButtonRef.current.contains(e.target)
+      ) {
+        setMenuActive(false); // Close the menu
       }
     };
 
@@ -22,8 +28,9 @@ const Tc = ({ openContactModal }) => {
   }, []);
 
   // Toggle menu
-  const toggleMenu = () => {
-    setMenuActive(!menuActive);
+  const toggleMenu = (e) => {
+    e.stopPropagation(); // Prevent triggering outside click logic
+    setMenuActive((prevState) => !prevState);
   };
 
   // Smooth scroll offset for navigation
@@ -45,6 +52,7 @@ const Tc = ({ openContactModal }) => {
         </div>
         <div
           className="menu-toggle"
+          ref={toggleButtonRef}
           onClick={toggleMenu}
           aria-expanded={menuActive ? "true" : "false"}
           aria-label="Toggle navigation menu"

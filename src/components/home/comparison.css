@@ -399,3 +399,11 @@
     height: 60px;
   }
 }
+@media (max-width: 900px) and (min-width: 770px){
+  .side-title{
+    margin-left: 80px;
+  }
+  .soocily-logo{
+    margin-left: 114px;
+  }
+}

@@ -30,31 +30,37 @@
     margin: 0 auto;
     /* padding: 20px; */
     width: 100%;
+    /* background-image: url("D:\react\soocily-latest\public\img\digital_marketing_background.png"); */
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .ck{
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    margin-top: 15px;
+    margin-top: 225px;
     border-radius: 10px;
     background-color: #161717;
     background: linear-gradient(72deg, #1b1a1a, #454040);
     top: 135;
+    /* background-image: url("D:\react\soocily-latest\public\img\image1.png"); */
   }
   
   /* Featured Blog Section */
   .featured-blog {
     position: relative;
-    background-color: #f1e3e3;
+    /* background-color: #f1e3e3; */
     border-radius: 15px;
-    padding: 40px;
+    padding: 20px;
     margin-bottom: 50px;
     overflow: hidden;
-    /* min-height: 450px; */
+    min-height: 400px;
     z-index: 1;
     background-size: cover;
     background-position: center;
     color: white; /* Text color for all content */
+    
   }
   
   /* Gradient overlay */
@@ -96,7 +102,7 @@
     margin-top: 18px;
   }
   
-  .read-more {
+  .blog-read-more {
     display: inline-block;
     text-decoration: none;
     margin-top: 7px;
@@ -112,13 +118,16 @@
     transition: all 0.3s ease;
   }
   
-  .read-more:hover {
+  .blog-read-more:hover {
     color: linear-gradient(45deg, #ff9800, #9c27b0); /* Reverse gradient on hover */
     transform: translateY(-3px); /* Lift effect */
     /* Stronger shadow on hover */
   }
+  .blog-read-more:hover {
+    color: #cc39e6;
+  }
   
-  .read-more:active {
+  .blog-read-more:active {
     transform: translateY(2px); /* Button pressed effect */
    
   }
@@ -256,9 +265,10 @@
 
 .banner img {
     width: 100%;
-    height: 270px;
+    height: 310px;
     object-fit: cover;
     border-radius: 10px;
+    padding-top: 0px;
 }
 
 @media (max-width: 768px) {
@@ -357,16 +367,15 @@
       grid-template-columns: 1fr;
     }
     .ck {
-        display: flex
-    ;
+        display: flex;
         justify-content: space-between;
         padding: 20px;
-        margin-top: 267px;
+        margin-top: 60px;
         border-radius: 10px;
-        background-color: #161717;
-        background: linear-gradient(72deg, #1b1a1a, #454040);
-        top: 135;
+        /* background-color: #161717;
+        background: linear-gradient(72deg, #1b1a1a, #454040); */
         flex-direction: column;
+        max-height: 280px;
     }
     .featured-blog {
       padding: 20px;

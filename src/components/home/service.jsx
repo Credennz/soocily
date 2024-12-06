@@ -100,7 +100,7 @@ export default function Service() {
           </ul>
         </div>
         <div class="service-card">
-          <div>
+          <div class="x1">
             <h2>Print Media</h2>
             <p>
               Organize and centralize your tasks into distinct lists for various
@@ -171,7 +171,7 @@ export default function Service() {
           </div>
         </div>
         <div class="service-card">
-          <div>
+          <div class="x2">
             <h2>Brand Shoot and TVC</h2>
             <p>Get instant reminders for upcoming tasks.</p>
           </div>
