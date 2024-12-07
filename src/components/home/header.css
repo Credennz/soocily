@@ -259,6 +259,8 @@ color: white;
   transform: translateY(-2px);
 }
 
+
+
 .hb-since {
   background: white;
   padding: 0.5rem 1.5rem;
@@ -802,7 +804,7 @@ height: 1050px;
   .hb-customers-badge {
     gap: 11px;
     padding: 0.4rem 0.5rem;
-    background-color: rgb(242, 243, 245);
+    background-color: rgb(206, 156, 167);
   }
 
   .hb-stats {

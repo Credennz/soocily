@@ -48,7 +48,9 @@ const Tc = ({ openContactModal }) => {
       {/* Header Navigation */}
       <nav className="hb-nav2">
         <div className="hb-logo">
-          <img src="../img/logosocily.png" alt="Soocily Logo" />
+          <HashLink to="/#header">
+            <img src="img/logosocily.png" alt="Soocily" />
+          </HashLink>
         </div>
         <div
           className="menu-toggle"

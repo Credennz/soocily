@@ -159,7 +159,7 @@ h1 {
 @media (min-width: 768px) and (max-width: 991px) {
     .left-column {
         flex: 1 1;
-        /* padding-left: 30px; */
+        padding-left: 0px;
         /* padding-top: 40px; */
         display: flex;
         flex-direction: column;
@@ -227,6 +227,7 @@ h1 {
         margin-bottom: 20px;
         /* margin-left: -14%; */
         margin-top: 20px;
+        align-content: center;
     }
 
     .industry-list {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import emailjs from "emailjs-com";
 import ThankYouModal from "./thankYouModal";
+import { HashLink } from 'react-router-hash-link';
  
 export default function Header({ openContactModal }) {
   const [menuActive, setMenuActive] = useState(false);
@@ -104,7 +105,7 @@ export default function Header({ openContactModal }) {
   const closeForm = () => setIsFormOpen(false);
  
   return (
-    <div>
+    <div id="header">
       <div className="hb-main">
         <div className="hb-hero-section">
           <div className="hb-top">
@@ -121,7 +122,9 @@ export default function Header({ openContactModal }) {
               ref={navRef}
             >
               <div className="hb-logo">
-                <img src="img/logosocily.png" alt="Soocily" />
+                <HashLink to="/#header">
+                  <img src="img/logosocily.png" alt="Soocily" />
+                </HashLink>
               </div>
  
               <div
@@ -182,6 +185,7 @@ export default function Header({ openContactModal }) {
                 </a>
               </div>
             </nav>
+            
             <div className="net">
               <img src="../img/since.svg" alt="img" />
             </div>

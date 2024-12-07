@@ -18,14 +18,11 @@ export default function about({ openContactModal }) {
                 <span>About Us</span>
               </div>
             </div>
-            <h2 class="artbox-subtitle">Discover Our Creative Agency Story</h2>
+            <h2 class="artbox-subtitle">Storytelling and Strategies</h2>
             <h1 class="artbox-title">Discover Who We Are and Our Mission</h1>
             <p class="artbox-description">
-              Discover who we are and our mission at Artbox. We are a passionate
-              team of creative professionals dedicated to crafting exceptional
-              web design solutions. <br />Our mission is to empower businesses with
-              innovative websites that not only captivate but also drive
-              results.
+            We are more than just a marketing agency; we are storytellers, innovators, and strategists dedicated to bringing brands to life. Our journey began with a vision to redefine the way businesses connect with their audiences. Today, we proudly stand as a trusted partner to brands seeking to make an impact.
+
             </p>
             <div class="artbox-cta-buttons">
               <a
@@ -36,7 +33,7 @@ export default function about({ openContactModal }) {
                 }}
                 class="artbox-btn artbox-btn-primary"
               >
-                View Case Studies
+                Contact Us
               </a>
               <a href="https://wa.me/+918895244936" class="artbox-btn artbox-btn-secondary">
                 Whatsapp us

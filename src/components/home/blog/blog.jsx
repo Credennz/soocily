@@ -206,7 +206,9 @@ useEffect(() => {
       {/* Header Navigation */}
       <nav className="hb-nav2">
         <div className="hb-logo">
-          <img src="img/logosocily.png" alt="Soocily" />
+          <HashLink to="/#header">
+            <img src="img/logosocily.png" alt="Soocily" />
+          </HashLink>
         </div>
         <div className="menu-toggle" ref={toggleButtonRef} onClick={toggleMenu}>
           <span></span>
@@ -261,6 +263,20 @@ useEffect(() => {
       {/* Blog Grid Section */}
       <div className="bcontainer">
         <div className="blog-grid">
+        <center>
+        <div className="ra-blogs">
+          <div className="ra-logox">
+            <img
+              src="../img/blogs_logo.svg"
+              alt="blogs Logo"
+              className="ra-blogs-logo"
+            />
+          </div>
+          <div className="ra-logo-text">
+            <span>Blogs</span>
+          </div>
+        </div>
+      </center>
           <div className="blog-n-t">
             <h2>Recent Blog Posts</h2>
           </div>

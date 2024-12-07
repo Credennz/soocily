@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-export default function Footer() {
+export default function Footer({ openContactModal }) {
+  
   return (
     <div>
       <footer>
@@ -12,15 +13,18 @@ export default function Footer() {
           solutions tailored to your brand.
         </p>
         <div className="tf-footer-links">
-          <button>About</button>
-          <button>Services</button>
-          <button>Why Us</button>
-          <button>Pricing</button>
-          <button>Works</button>
-          <button>Contact</button>
+          <button><a href="/#services">Service</a></button>
+          <button><a href="/#about">About Us</a></button>
+          <button><a href="/#in">Industries</a></button>
+          <button><a href="/#whyus">Why us</a></button>
+          <button><a href="/#blogs">Blogs</a></button>
+          <button><a href="/#contact"  onClick={(e) => {
+                    e.preventDefault();
+                    openContactModal();
+                  }}>Contact</a></button>
         </div>
         <div className="tf-and-c">
-          <Link to="/tc">Terms and Conditions</Link>
+          <a href="/tc">Terms and Conditions</a>
           <a href="/pp">Privacy Policy</a>
           <a href="/cp">Customer Policy</a>
         </div>

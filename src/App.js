@@ -66,7 +66,7 @@ function App() {
                 <Testimonials />
                 <Blogs />
                 <Faq />
-                <Footer />
+                <Footer openContactModal={openContactModal}/>
               </>
             }
           />

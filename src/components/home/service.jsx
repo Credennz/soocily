@@ -1,6 +1,5 @@
-
 import React from "react";
-
+ 
 export default function Service() {
   return (
     <div id="services" class="ssv">
@@ -65,9 +64,9 @@ export default function Service() {
           </ul>
         </div>
         <div class="service-card card-span">
-          <div>
+          <div class="anup">
             <h2>Influencers and Collaborations</h2>
-            <p>Schedule one-time or recurring tasks exactly when you want.</p>
+            <p>Connect with the right influencers to amplify your message. We identify, negotiate, and manage partnerships that align with your brand and captivate your audience.</p>
           </div>
           <div class="features-list">
             <div class="shadow-background"></div>
@@ -78,8 +77,7 @@ export default function Service() {
           <div>
             <h2>Digital Ads</h2>
             <p>
-              Experience the joy of completing tasks with our satisfying
-              checklists. Try it out below!
+            Drive your brand’s growth with targeted online advertisements. From social media to search engines, we create ad campaigns that deliver measurable results and maximize ROI.
             </p>
           </div>
           <ul>
@@ -103,8 +101,7 @@ export default function Service() {
           <div class="x1">
             <h2>Print Media</h2>
             <p>
-              Organize and centralize your tasks into distinct lists for various
-              purposes.
+            From magazines to newspapers, we design and manage compelling print campaigns that leave a lasting impression and expand your reach beyond digital screens.
             </p>
           </div>
           <ul>
@@ -126,8 +123,7 @@ export default function Service() {
           <div>
             <h2>Websites and UI/UX</h2>
             <p>
-              Attatch notes to your tasks with links or any fleeting thought,
-              auto open links when your task goes live.
+            Turn visitors into loyal customers with visually stunning websites and seamless user experiences. Our team ensures your online presence is as functional as it is beautiful.
             </p>
           </div>
           <div class="editor-interface">
@@ -138,8 +134,7 @@ export default function Service() {
           <div>
             <h2>E-Com Management</h2>
             <p>
-              Share a copy of your list to anyone so they can use it in their
-              account.
+            Simplify your online store operations. From inventory to customer engagement, we handle it all, ensuring smooth transactions and satisfied customers.
             </p>
           </div>
           <div class="support-container">
@@ -173,7 +168,7 @@ export default function Service() {
         <div class="service-card">
           <div class="x2">
             <h2>Brand Shoot and TVC</h2>
-            <p>Get instant reminders for upcoming tasks.</p>
+            <p>Showcase your brand’s personality with high-quality photoshoots and commercials. We craft visuals that resonate, creating memorable experiences for your audience.</p>
           </div>
           <ul>
             <div class="Brand-item1">
@@ -193,4 +188,4 @@ export default function Service() {
       </div>
     </div>
   );
-}                 
+}                

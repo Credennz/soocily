@@ -1,4 +1,4 @@
-.back-button {
+/* .back-button {
     display: flex;
     align-items: center;
     background: none;
@@ -15,7 +15,7 @@
   .back-icon {
     width: 16px;
     height: 16px;
-  }
+  } */
   .privacy-policy-container {
     padding: 20px 190px;
     font-family: Arial, sans-serif;
@@ -34,7 +34,7 @@
     }
     .privacy-policy-container h2{
       font-size: 20px;
-  color:black;
+      color:black;
     }
     .privacy-policy-container  h3 {
       color: black;

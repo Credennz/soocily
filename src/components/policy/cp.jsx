@@ -46,7 +46,9 @@ const CustomerPolicy = ({openContactModal}) => {
       {/* Header Navigation */}
       <nav className="hb-nav2">
         <div className="hb-logo">
-          <img src="../img/logosocily.png" alt="Soocily Logo" />
+          <HashLink to="/#header">
+            <img src="img/logosocily.png" alt="Soocily" />
+          </HashLink>
         </div>
         <div
           className="menu-toggle"
@@ -118,7 +120,7 @@ const CustomerPolicy = ({openContactModal}) => {
 
       {/* Main Content */}
     <div className="policy-container">
-    <button className="back-button" onClick={() => window.history.back()}>
+    {/* <button className="back-button" onClick={() => window.history.back()}>
     <div className="back-icon-container">
         <img
         src="https://www.svgrepo.com/show/101168/go-back-arrow.svg"
@@ -127,7 +129,7 @@ const CustomerPolicy = ({openContactModal}) => {
         />
     </div>
     <span className="back-text">Back</span>
-    </button>
+    </button> */}
       <h1>Customer Policy</h1>
       <p><strong>Effective Date:</strong> 17 Jan 2023</p>
       <p>

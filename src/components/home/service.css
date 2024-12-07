@@ -433,11 +433,12 @@
     align-items: stretch;
     align-items: flex;
     display: flex;
-    top: 1px;
+    top: 4px;
     position: relative;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
+    max-width:370px;
   }
   .ssv h1 {
     text-align: center;
@@ -467,7 +468,7 @@
     align-items: center;
     align-items: flex;
     display: flex;
-    top: 1px;
+    top: 0px;
     position: relative;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -522,32 +523,57 @@
 @media (max-width: 768px) {
   .service-card:nth-child(1),
   .service-card:nth-child(2),
-  .service-card:nth-child(4),
   .service-card:nth-child(5),
-  .service-card:nth-child(6),
-  .service-card:nth-child(7),
   .service-card:nth-child(8) {
     height: 300px;
+  }
+  .service-card:nth-child(7){
+    height: 340px;
+  }
+  .service-card:nth-child(6),
+  .service-card:nth-child(4){
+    height: 320px;
   }
   .service-card:nth-child(3) {
     height: 500px;
     }
     .features-list{
-        margin-top: -90px;
+        margin-top: -113px;
     }
     .editor-interface {
         margin-top: 16px;
     }
 }
-@media (max-width:530px){
+/* @media (max-width:480px){
     .service-card .support-container {
-        top:-10px;
+        top:-22px;
     }
-}
+} */
 
 .x1{
-  margin-top: -24px;
+  margin-top: -15px;
 }
 .x2{
-  margin-top: -36px;
+  margin-top: -16px;
+}
+
+@media (max-width:590px) and (min-width:480px){
+  .service-card .support-container {
+      top:3px;
+  }
+}
+@media (max-width:407px){
+  .service-card .support-container {
+      top:-5px;
+  }
+}
+@media (max-width: 460px) {
+  .editor-interface {
+      margin-top: 7px;
+  }
+}
+@media (max-width:768px) and (min-width:480px){
+  .support-icons{
+    margin-left: 34px;
+  }
 }

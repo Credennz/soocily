@@ -29,22 +29,22 @@
     text-decoration: underline;
   }
   
-  ul {
+  .terms-link ul {
     list-style-type: disc;
     /* margin-left: 40px; */
   }
   
-  li {
+  .terms-link li {
     margin-bottom: 10px;
   }
   
-  p {
+  .terms-link p {
     font-size: 16px;
     color: #333;
     margin-bottom: 15px;
   }
   
-  a {
+  .terms-link a {
     text-decoration: none;
   }
   

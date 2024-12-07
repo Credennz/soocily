@@ -24,7 +24,7 @@ footer {
     .tf-footer-links button {
      
             text-decoration: none;
-            color: #555;
+            color: #262626;
             font-size: 1em;
             padding: 10px 15px;
             background-color: #dde3e9;
@@ -37,7 +37,11 @@ footer {
     }
 
     .tf-footer-links button:hover {
-    background-color: #e0e0e0;
+    background-color: #b4a2c3;
+    }
+    .tf-footer-links button a{
+        text-decoration: none;
+        color: black;
     }
     .tf-and-c{
         display: flex
