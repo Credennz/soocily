@@ -596,16 +596,17 @@ const handleLinkClick = () => {
 <HashLink to="/#whyus" class="nav-link"  scroll={scrollWithOffset} onClick={handleLinkClick}>Why Us</HashLink>
 <HashLink to="/#blogs" class="nav-link"  scroll={scrollWithOffset}onClick={handleLinkClick}>Blogs</HashLink>
 
-          <a
-            href="#contact"
+<HashLink
+            to="/#contact"
             onClick={(e) => {
               e.preventDefault();
-              openContactModal();
+              if (openContactModal) openContactModal();
+              else console.error("openContactModal is not passed as a prop.");
             }}
-            className="hb-contact-btn"
+             className="hb-contact-btn"
           >
             Contact
-          </a>
+          </HashLink>
         </div>
       </nav>
 
@@ -646,7 +647,7 @@ const handleLinkClick = () => {
       </main>
 
       {/* Footer */}
-      <Footer />
+      <Footer openContactModal={openContactModal} />
     </div>
   );
 };

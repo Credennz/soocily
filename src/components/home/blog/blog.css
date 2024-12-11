@@ -401,4 +401,9 @@
       height: 200px;
     }
   }
-  
+  @media (max-width:430px){
+    .blog-read-more{
+      margin-top:25px;
+      margin-left:152px;
+    }
+  }

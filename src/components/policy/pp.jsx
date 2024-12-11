@@ -107,16 +107,17 @@ const PrivacyPolicy = ({openContactModal}) => {
           >
             Blogs
           </HashLink>
-          <a
-            href="#contact"
+          <HashLink
+            to="/#contact"
             onClick={(e) => {
               e.preventDefault();
-              openContactModal();
+              if (openContactModal) openContactModal();
+              else console.error("openContactModal is not passed as a prop.");
             }}
-            className="hb-contact-btn"
+             className="hb-contact-btn"
           >
             Contact
-          </a>
+          </HashLink>
         </div>
       </nav>
     {/* Main Content */}
@@ -268,7 +269,7 @@ const PrivacyPolicy = ({openContactModal}) => {
         Email: <a href="mailto:hello@soocily.com">hello@soocily.com</a>
       </address>
     </div>
-    <Footer/>
+    <Footer openContactModal={openContactModal} />
     </div>
   );
 };

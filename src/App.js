@@ -36,6 +36,9 @@ import "./components/home/header.css";
 import "./components/home/hlogo.css";
 // import "./components/home/casestudy.css";
 
+// Import the ScrollToTop component
+import ScrollToTop from "./components/scrollToTop";
+
 function App() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
@@ -50,7 +53,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-       
+       <ScrollToTop />
         <Routes>
           {/* Home Page */}
           <Route
@@ -66,16 +69,17 @@ function App() {
                 <Testimonials />
                 <Blogs />
                 <Faq />
-                <Footer openContactModal={openContactModal}/>
+                <Footer openContactModal={openContactModal} />
               </>
             }
           />
           {/* Blog Pages */}
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/tc" element={<Tc />} />
-          <Route path="/pp" element={<PrivacyPolicy />} />
-          <Route path="/cp" element={<CustomerPolicy />} />
-          <Route path="/post/:id" element={<BlogPost />} />
+          <Route path="/blog" element={<Blog openContactModal={openContactModal} />} />
+          <Route path="/tc" element={<Tc openContactModal={openContactModal} />} />
+
+          <Route path="/pp" element={<PrivacyPolicy openContactModal={openContactModal} />} />
+          <Route path="/cp" element={<CustomerPolicy openContactModal={openContactModal} />} />
+          <Route path="/post/:id" element={<BlogPost openContactModal={openContactModal} />} />
         </Routes>
         {/* Contact Modal */}
         {isContactModalOpen && (

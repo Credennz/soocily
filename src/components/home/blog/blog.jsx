@@ -3,7 +3,8 @@ import "../blog/blog.css";
 import Footer from "../footer";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { HashLink } from 'react-router-hash-link'; 
+import { HashLink } from 'react-router-hash-link';
+import ContactModal from "../contactoverlay"
 const Blog = ({ openContactModal }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [menuActive, setMenuActive] = useState(false);
@@ -225,16 +226,17 @@ useEffect(() => {
   <HashLink to="/#whyus" class="nav-link"  scroll={scrollWithOffset} onClick={handleLinkClick}>Why Us</HashLink>
   <HashLink to="/#blogs" class="nav-link"  scroll={scrollWithOffset}onClick={handleLinkClick}>Blogs</HashLink>
 
-  <a
-    href="#contact"
-    onClick={(e) => {
-      e.preventDefault();
-      openContactModal();
-    }}
-    className="hb-contact-btn"
-  >
-    Contact
-  </a>
+  <HashLink
+            to="/#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              if (openContactModal) openContactModal();
+              else console.error("openContactModal is not passed as a prop.");
+            }}
+             className="hb-contact-btn"
+          >
+            Contact
+          </HashLink>
 </div>
       </nav>
 
@@ -353,7 +355,7 @@ useEffect(() => {
       </div>
 
       {/* Footer */}
-      <Footer />
+      <Footer openContactModal={openContactModal} />
     </div>
   );
 };

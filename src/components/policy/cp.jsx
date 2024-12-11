@@ -105,16 +105,17 @@ const CustomerPolicy = ({openContactModal}) => {
           >
             Blogs
           </HashLink>
-          <a
-            href="#contact"
+          <HashLink
+            to="/#contact"
             onClick={(e) => {
               e.preventDefault();
-              openContactModal();
+              if (openContactModal) openContactModal();
+              else console.error("openContactModal is not passed as a prop.");
             }}
-            className="hb-contact-btn"
+             className="hb-contact-btn"
           >
             Contact
-          </a>
+          </HashLink>
         </div>
       </nav>
 
@@ -232,7 +233,7 @@ const CustomerPolicy = ({openContactModal}) => {
         Thank you for trusting Soocily. We’re committed to a successful partnership.
       </p>
     </div>
-    <Footer/>
+    <Footer openContactModal={openContactModal} />
     </div>
   );
 };

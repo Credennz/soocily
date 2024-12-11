@@ -1,9 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
-
-export default function Footer({ openContactModal }) {
+const Footer = ({ openContactModal }) => {
+  const navigate = useNavigate(); // Initialize useNavigate hook
   
+  const handleScrollToSection = (e, sectionId) => {
+    e.preventDefault();
+    
+    // Check if the current path is the home page, otherwise navigate there
+    if (window.location.pathname !== "/") {
+      navigate("/"); // Navigate to home page
+    }
+
+    // After navigating, use setTimeout to give time for navigation to complete before scrolling
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        window.scrollTo({
+          top: section.offsetTop - 200, // 200px offset
+          behavior: "smooth", // Smooth scrolling
+        });
+      }
+    }, 100); // Delay scrolling to allow time for navigation to home
+  };
+
   return (
     <div>
       <footer>
@@ -13,20 +34,20 @@ export default function Footer({ openContactModal }) {
           solutions tailored to your brand.
         </p>
         <div className="tf-footer-links">
-          <button><a href="/#services">Service</a></button>
-          <button><a href="/#about">About Us</a></button>
-          <button><a href="/#in">Industries</a></button>
-          <button><a href="/#whyus">Why us</a></button>
-          <button><a href="/#blogs">Blogs</a></button>
-          <button><a href="/#contact"  onClick={(e) => {
+          <button> <HashLink to="/#services" onClick={(e) => handleScrollToSection(e, "services")}>Service</HashLink></button>
+          <button> <HashLink to="/#about" onClick={(e) => handleScrollToSection(e, "about")}>About Us</HashLink></button>
+          <button> <HashLink to="/#in" onClick={(e) => handleScrollToSection(e, "in")}>Industries</HashLink></button>
+          <button> <HashLink to="/#whyus" onClick={(e) => handleScrollToSection(e, "whyus")}>Why Us</HashLink></button>
+          <button> <HashLink to="/#blogs" onClick={(e) => handleScrollToSection(e, "blogs")}>Blogs</HashLink></button>
+          <button><HashLink to="/#contact" onClick={(e) => {
                     e.preventDefault();
                     openContactModal();
-                  }}>Contact</a></button>
+                  }}>Contact</HashLink></button>
         </div>
         <div className="tf-and-c">
-          <a href="/tc">Terms and Conditions</a>
-          <a href="/pp">Privacy Policy</a>
-          <a href="/cp">Customer Policy</a>
+          <HashLink to="/tc">Terms and Conditions</HashLink>
+          <HashLink to="/pp">Privacy Policy</HashLink>
+          <HashLink to="/cp">Customer Policy</HashLink>
         </div>
         <hr />
         <div className="tf-x">
@@ -49,4 +70,6 @@ export default function Footer({ openContactModal }) {
       </footer>
     </div>
   );
-}
+};
+
+export default Footer;

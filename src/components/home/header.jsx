@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import emailjs from "emailjs-com";
 import ThankYouModal from "./thankYouModal";
 import { HashLink } from 'react-router-hash-link';
- 
+
 export default function Header({ openContactModal }) {
   const [menuActive, setMenuActive] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -12,12 +12,12 @@ export default function Header({ openContactModal }) {
   const placeholderRef = useRef(null);
   const menuRef = useRef(null);
   const toggleButtonRef = useRef(null);
- 
+
   const toggleMenu = (e) => {
     e.stopPropagation(); // Prevent triggering outside click logic
     setMenuActive((prevState) => !prevState); // Toggle menu state
   };
- 
+
   const closeMenuIfClickedOutside = (e) => {
     if (
       menuRef.current &&
@@ -28,24 +28,24 @@ export default function Header({ openContactModal }) {
       setMenuActive(false); // Close the menu
     }
   };
- 
+
   useEffect(() => {
     document.addEventListener("mousedown", closeMenuIfClickedOutside);
     return () => {
       document.removeEventListener("mousedown", closeMenuIfClickedOutside);
     };
   }, []);
- 
+
   useEffect(() => {
     let lastScrollTop = 0;
     const handleScroll = () => {
       if (!navRef.current || !placeholderRef.current) return;
- 
+
       const navHeight = navRef.current.offsetHeight;
       const scrollY = window.scrollY;
       const isScrollingDown = scrollY > lastScrollTop;
       lastScrollTop = scrollY;
- 
+
       if (isScrollingDown && scrollY > navHeight + 10 && !isSticky) {
         setIsSticky(true);
         placeholderRef.current.style.height = `${navHeight + 35}px`;
@@ -54,26 +54,26 @@ export default function Header({ openContactModal }) {
         placeholderRef.current.style.height = "0px";
       }
     };
- 
+
     const debouncedHandleScroll = () => {
       clearTimeout(handleScroll.debounceTimer);
       handleScroll.debounceTimer = setTimeout(() => handleScroll(), 10);
     };
- 
+
     window.addEventListener("scroll", debouncedHandleScroll);
     return () => {
       window.removeEventListener("scroll", debouncedHandleScroll);
       clearTimeout(handleScroll.debounceTimer);
     };
   }, [isSticky]);
- 
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
- 
+
     const formData = new FormData(e.target);
     const formValues = Object.fromEntries(formData.entries());
     console.log("Form submitted with values:", formValues);
- 
+
     emailjs
       .sendForm(
         "service_6z9pba8",
@@ -92,18 +92,29 @@ export default function Header({ openContactModal }) {
         }
       );
   };
- 
+
   const handleLinkClick = () => {
     setMenuActive(false); // Close the menu when a link is clicked
   };
- 
+
   const closeModal = () => {
     setIsModalOpen(false);
   };
- 
+
   const openForm = () => setIsFormOpen(true);
   const closeForm = () => setIsFormOpen(false);
- 
+  // Custom scroll function to handle the scroll with offset
+  const scrollWithOffset = (el) => {
+    const elementPosition = el.getBoundingClientRect().top + window.pageYOffset;
+    const offset = 200; // Adjust this based on your sticky navbar height
+  
+    window.scrollTo({
+      top: elementPosition - offset,
+      behavior: "smooth",
+    });
+  };
+  
+
   return (
     <div id="header">
       <div className="hb-main">
@@ -126,7 +137,7 @@ export default function Header({ openContactModal }) {
                   <img src="img/logosocily.png" alt="Soocily" />
                 </HashLink>
               </div>
- 
+
               <div
                 className="menu-toggle"
                 ref={toggleButtonRef}
@@ -136,60 +147,82 @@ export default function Header({ openContactModal }) {
                 <span></span>
                 <span></span>
               </div>
- 
-              <div
-                className={`hb-nav-links ${menuActive ? "active" : ""}`}
-                ref={menuRef}
-              >
-                <a
-                  href="#services"
-                  className="nav-link"
-                  onClick={handleLinkClick}
-                >
-                  Services
-                </a>
-                <a
-                  href="#about"
-                  className="nav-link"
-                  onClick={handleLinkClick}
-                >
-                  About Us
-                </a>
-                <a href="#in" className="nav-link" onClick={handleLinkClick}>
-                  Industries
-                </a>
-                <a
-                  href="#whyus"
-                  className="nav-link"
-                  onClick={handleLinkClick}
-                >
-                  Why us
-                </a>
-                <a
-                  href="#blogs"
-                  className="nav-link"
-                  onClick={handleLinkClick}
-                >
-                  Blogs
-                </a>
-                <a
-                  href="#contact"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    openContactModal();
-                  }}
-                  style={{ color: "white" }}
-                  className="hb-contact-btn"
-                >
-                  Contact
-                </a>
-              </div>
+
+              <div className={`hb-nav-links ${menuActive ? "active" : ""}`} ref={menuRef}>
+  <HashLink
+    to="#services"
+    className="nav-link"
+    onClick={(e) => {
+      e.preventDefault();
+      const element = document.querySelector("#services");
+      scrollWithOffset(element);
+    }}
+  >
+    Services
+  </HashLink>
+  <HashLink
+    to="#about"
+    className="nav-link"
+    onClick={(e) => {
+      e.preventDefault();
+      const element = document.querySelector("#about");
+      scrollWithOffset(element);
+    }}
+  >
+    About Us
+  </HashLink>
+  <HashLink
+    to="#in"
+    className="nav-link"
+    onClick={(e) => {
+      e.preventDefault();
+      const element = document.querySelector("#in");
+      scrollWithOffset(element);
+    }}
+  >
+    Industries
+  </HashLink>
+  <HashLink
+    to="#whyus"
+    className="nav-link"
+    onClick={(e) => {
+      e.preventDefault();
+      const element = document.querySelector("#whyus");
+      scrollWithOffset(element);
+    }}
+  >
+    Why Us
+  </HashLink>
+  <HashLink
+    to="#blogs"
+    className="nav-link"
+    onClick={(e) => {
+      e.preventDefault();
+      const element = document.querySelector("#blogs");
+      scrollWithOffset(element);
+    }}
+  >
+    Blogs
+  </HashLink>
+  <a
+    href="#contact"
+    onClick={(e) => {
+      e.preventDefault();
+      openContactModal();
+    }}
+    style={{ color: "white" }}
+    className="hb-contact-btn"
+  >
+    Contact
+  </a>
+</div>
+
             </nav>
-            
+
             <div className="net">
               <img src="../img/since.svg" alt="img" />
             </div>
- 
+
             <h1 className="hb-title">
               Optimize Your Marketing
               <br />
@@ -201,7 +234,7 @@ export default function Header({ openContactModal }) {
               . in Ad Spend
             </p>
           </div>
- 
+
           {/* Form Modal */}
           {isFormOpen && (
             <div className="modal-overlay">
@@ -263,10 +296,10 @@ export default function Header({ openContactModal }) {
               </div>
             </div>
           )}
- 
+
           {/* Thank You Modal */}
           <ThankYouModal isOpen={isModalOpen} onClose={closeModal} />
- 
+
           <div className="hb-part2">
             <div className="hb-net">
               <img src="img/net.png" alt="net" />
@@ -277,7 +310,7 @@ export default function Header({ openContactModal }) {
             <div className="hb-atright">
               <img src="img/atright.png" alt="net" />
             </div>
- 
+
             <div className="hb-actions">
               <a href="#" onClick={openForm} className="hb-cta-button">
                 Request Call Back
@@ -305,7 +338,7 @@ export default function Header({ openContactModal }) {
                 </div>
               </div>
             </div>
- 
+
             <div className="hb-stats-container">
               <div className="hb-stat-card">
                 <div className="hb-stat-number">3X</div>

@@ -107,16 +107,17 @@ const Tc = ({ openContactModal }) => {
           >
             Blogs
           </HashLink>
-          <a
-            href="#contact"
+          <HashLink
+            to="/#contact"
             onClick={(e) => {
               e.preventDefault();
-              openContactModal();
+              if (openContactModal) openContactModal();
+              else console.error("openContactModal is not passed as a prop.");
             }}
-            className="hb-contact-btn"
+             className="hb-contact-btn"
           >
             Contact
-          </a>
+          </HashLink>
         </div>
       </nav>
 
@@ -214,8 +215,7 @@ const Tc = ({ openContactModal }) => {
         Email: <a href="mailto:hello@soocily.com" className="terms-link">hello@soocily.com</a>
       </p>
     </div>
-      {/* Footer */}
-      <Footer />
+    <Footer openContactModal={openContactModal} />
     </div>
   );
 };
