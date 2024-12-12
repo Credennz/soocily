@@ -106,7 +106,7 @@ export default function Header({ openContactModal }) {
   // Custom scroll function to handle the scroll with offset
   const scrollWithOffset = (el) => {
     const elementPosition = el.getBoundingClientRect().top + window.pageYOffset;
-    const offset = 200; // Adjust this based on your sticky navbar height
+    const offset = 150; // Adjust this based on your sticky navbar height
   
     window.scrollTo({
       top: elementPosition - offset,
