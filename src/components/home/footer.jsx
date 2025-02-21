@@ -53,7 +53,7 @@ const Footer = ({ openContactModal }) => {
         <div className="tf-x">
           <div className="tf-attribution">Developed by credennz.com</div>
           <div className="tf-social-icons">
-            <a href="#">
+            <a href="https://www.linkedin.com/company/soocily">
               <img src="/img/Linkedin_logo.svg" alt="LinkedIn" />
             </a>
             <a href="https://x.com/soocily21526">

@@ -322,7 +322,7 @@
   top: -134px;
   left: 10%;
   gap: 0px;
-  /* background-image: url("C:\Users\HP\Downloads\soocily-master (1)\soocily-master\public\img\image-2.jpeg"); */
+  background-image: url("../home/Rectangle\ 1.svg");
   background-position: center;
   background-size: cover;
 
@@ -338,7 +338,7 @@
   top: 98px;
   left: 41%;
   gap: 0px;
-  /* background-image: url("C:\Users\HP\Downloads\soocily-master (1)\soocily-master\public\img\image-1.jpeg"); */
+  background-image: url("../home/Rectangle2.svg");
   background-position: center;
   background-size: cover;
 }

@@ -84,16 +84,16 @@ export default function Service() {
             <div class="checklist">
               <div class="item completed">
                 <span class="checkmark"></span>
-                <span>Web design</span>
+                <span>Meta Ads</span>
               </div>
               <div class="item">
                 <span class="checkmar"></span>
-                <span>Design system</span>
+                <span>Google Ads</span>
               </div>
-              <div class="item">
+              {/* <div class="item">
                 <span class="checkmar"></span>
                 <span>Framer web development</span>
-              </div>
+              </div> */}
             </div>
           </ul>
         </div>

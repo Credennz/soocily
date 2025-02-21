@@ -9,7 +9,7 @@ export default function industry() {
             <h1>Industries</h1>
             <p>Tailored solutions to fit your specific business needs.</p>
             <a href="+91 88952 44936"  class="book-call">
-              Book a Call <svg
+              Call Now <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
